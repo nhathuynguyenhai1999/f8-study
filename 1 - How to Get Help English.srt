@@ -1,0 +1,76 @@
+﻿1
+00:00:00,960 --> 00:00:02,130
+‫Hello and welcome.
+
+2
+00:00:02,160 --> 00:00:06,690
+‫My name is Steven Grider, and in this course, I'm going to teach you everything I know about SJS before
+
+3
+00:00:06,690 --> 00:00:07,220
+‫we get started.
+
+4
+00:00:07,230 --> 00:00:08,940
+‫However, just a couple of very quick notes.
+
+5
+00:00:08,940 --> 00:00:13,110
+‫I want to go over specifically how you can get help if you ever get stuck as you working through this
+
+6
+00:00:13,110 --> 00:00:13,490
+‫course.
+
+7
+00:00:14,070 --> 00:00:18,690
+‫So if you get stuck at any point in time, the best place to go for help is that you'd make a discussion
+
+8
+00:00:18,690 --> 00:00:19,000
+‫board.
+
+9
+00:00:19,410 --> 00:00:22,800
+‫I have one or two teachers who watched the discussion in this course.
+
+10
+00:00:23,040 --> 00:00:26,970
+‫And if you ever have a question, just post your question and hopefully one, those ideas will be able
+
+11
+00:00:26,970 --> 00:00:27,900
+‫to answer your question.
+
+12
+00:00:28,470 --> 00:00:31,680
+‫If you do not get help there, you can always check out my Dischord server.
+
+13
+00:00:31,950 --> 00:00:34,020
+‫Discord is a kind of chat application.
+
+14
+00:00:34,230 --> 00:00:38,370
+‫If you want to join my Dischord server, you can find a link to it in the next lecture.
+
+15
+00:00:38,400 --> 00:00:39,840
+‫So the video right after this one.
+
+16
+00:00:40,410 --> 00:00:42,000
+‫And then finally, last way to get help.
+
+17
+00:00:42,000 --> 00:00:44,190
+‫You can always direct message me on me.
+
+18
+00:00:45,080 --> 00:00:48,890
+‫OK, so now you've got this little bit of administrative stuff out of the way, let's dive into the
+
+19
+00:00:48,890 --> 00:00:50,690
+‫world of Nest in the next video.
+

@@ -1,0 +1,432 @@
+﻿1
+00:00:01,630 --> 00:00:06,310
+‫All right, onto steps number three and four, so in step three, we need to create a nest module and
+
+2
+00:00:06,310 --> 00:00:06,820
+‫a controller.
+
+3
+00:00:07,120 --> 00:00:10,900
+‫I want to very quickly tell you what a module in a controller are so we're can take a look at a couple
+
+4
+00:00:10,900 --> 00:00:11,680
+‫of different diagrams.
+
+5
+00:00:12,340 --> 00:00:12,700
+‫All right.
+
+6
+00:00:12,700 --> 00:00:16,630
+‫So this diagram right here is probably going to look somewhat familiar if you've ever put together any
+
+7
+00:00:16,630 --> 00:00:17,270
+‫kind of server.
+
+8
+00:00:17,620 --> 00:00:22,720
+‫So in just about every HTP server you're ever going to create, you're going to have what is referred
+
+9
+00:00:22,720 --> 00:00:24,880
+‫to as a request response cycle.
+
+10
+00:00:25,900 --> 00:00:29,680
+‫Users are going to make requests to your server inside of your server, you're going to have some amount
+
+11
+00:00:29,680 --> 00:00:31,590
+‫of code that's going to process that request.
+
+12
+00:00:31,990 --> 00:00:34,060
+‫You might validate some data inside the request.
+
+13
+00:00:34,360 --> 00:00:38,050
+‫You might handle the request differently depending upon what route it is addressed to.
+
+14
+00:00:38,320 --> 00:00:42,220
+‫And then eventually you're going to formulate a response and send it back to ever made the request.
+
+15
+00:00:43,090 --> 00:00:47,740
+‫Now, just about every server you ever put together, this code right here that's going to process that
+
+16
+00:00:47,740 --> 00:00:51,190
+‫request is almost always going to look rather similar in nature.
+
+17
+00:00:51,400 --> 00:00:56,950
+‫In other words, this kind of request response cycle almost always has the same steps inside of it,
+
+18
+00:00:57,160 --> 00:01:02,320
+‫regardless of the language framework library or whatever else that you use to build your server.
+
+19
+00:01:03,160 --> 00:01:07,440
+‫So this code or that process almost always looks something like this.
+
+20
+00:01:08,290 --> 00:01:12,960
+‫So just about every server that you're ever going to put together is going to receive a request and
+
+21
+00:01:12,970 --> 00:01:16,000
+‫then might do some validation on data contained inside that request.
+
+22
+00:01:16,150 --> 00:01:19,420
+‫So, for example, we might validate some body or some data in the body.
+
+23
+00:01:19,420 --> 00:01:25,120
+‫The request we then might make sure that the user is authenticated or authorized to send us a request.
+
+24
+00:01:26,080 --> 00:01:31,180
+‫We're then going to route the request off to a particular function to handle the request that might
+
+25
+00:01:31,180 --> 00:01:36,250
+‫result in us running some particular business logic and eventually maybe access or store some information
+
+26
+00:01:36,250 --> 00:01:37,390
+‫inside of a database.
+
+27
+00:01:39,320 --> 00:01:43,640
+‫Then as a result of this entire process, we're going to formulate a response and send the response
+
+28
+00:01:43,640 --> 00:01:45,380
+‫back to whoever made us the request.
+
+29
+00:01:46,330 --> 00:01:51,220
+‫So, again, doesn't really matter what language, framework, anything that you're using, just about
+
+30
+00:01:51,220 --> 00:01:53,800
+‫every server is going to have the same series of steps.
+
+31
+00:01:54,460 --> 00:01:58,440
+‫In some cases, we might not be doing authentication, so maybe some steps will fall out.
+
+32
+00:01:58,450 --> 00:02:00,950
+‫But at the end of the day, this is kind of a very general case.
+
+33
+00:02:01,870 --> 00:02:07,670
+‫So in that case, we get special tools to help us address each of these very particular steps.
+
+34
+00:02:08,230 --> 00:02:14,260
+‫So in Nest, we have tools to help us create something called, say, a pipe pipes and just help us
+
+35
+00:02:14,260 --> 00:02:16,270
+‫validate data on incoming requests.
+
+36
+00:02:16,900 --> 00:02:20,080
+‫We also have tools that allow us to create something called guards.
+
+37
+00:02:20,560 --> 00:02:25,480
+‫Guards make sure that incoming requests are coming from users who are authenticated or authorized to
+
+38
+00:02:25,480 --> 00:02:26,310
+‫use our application.
+
+39
+00:02:26,980 --> 00:02:29,410
+‫We get also tools to create controllers.
+
+40
+00:02:29,770 --> 00:02:31,810
+‫Controllers contain routing logic.
+
+41
+00:02:32,350 --> 00:02:34,390
+‫We get tools to create something called services.
+
+42
+00:02:34,390 --> 00:02:36,160
+‫Those contain business logic and so on.
+
+43
+00:02:36,940 --> 00:02:41,320
+‫So throughout this course, as we work with Nest, we're going to learn about each of these different
+
+44
+00:02:41,320 --> 00:02:42,130
+‫sets of tools.
+
+45
+00:02:42,610 --> 00:02:48,310
+‫Each of these different sets of tools included in Nest are meant to help us and put together some piece
+
+46
+00:02:48,310 --> 00:02:49,870
+‫of handling incoming requests.
+
+47
+00:02:50,710 --> 00:02:54,540
+‫Besides just the five I'm showing right here, there's a couple of other tools we're going to look at.
+
+48
+00:02:55,150 --> 00:02:59,890
+‫So these are all tools inside of Nest that help us make things that handle these incoming requests.
+
+49
+00:03:01,780 --> 00:03:04,610
+‫So we still have controllers and services, which we saw in the last diagram.
+
+50
+00:03:05,020 --> 00:03:06,700
+‫We also have something called module's.
+
+51
+00:03:07,090 --> 00:03:10,660
+‫We have pipes, filters, guards', interceptors and repositories.
+
+52
+00:03:11,250 --> 00:03:13,930
+‫Again, we're going to learn about all these things throughout this course.
+
+53
+00:03:14,920 --> 00:03:20,290
+‫The absolute bare minimum that is required to put together the most simple nest application possible
+
+54
+00:03:20,710 --> 00:03:22,960
+‫is a module and a controller.
+
+55
+00:03:23,620 --> 00:03:28,120
+‫Every nest application you ever create is going to have at least one module and one controller inside
+
+56
+00:03:28,120 --> 00:03:28,360
+‫of it.
+
+57
+00:03:29,110 --> 00:03:32,860
+‫So in the diagram we were just looking at a moment ago, this one right here where we said we were going
+
+58
+00:03:32,860 --> 00:03:35,040
+‫to create a nest module and a controller.
+
+59
+00:03:35,590 --> 00:03:39,700
+‫These are the two things that are required to make the most simple basic app possible.
+
+60
+00:03:40,450 --> 00:03:44,530
+‫So that mind let's go back over to our editor and we're going to create a module and a controller.
+
+61
+00:03:46,320 --> 00:03:50,250
+‫So back over here to get started, I'm going to create a new directory called SIRC.
+
+62
+00:03:51,220 --> 00:03:54,180
+‫Then inside, there are going to make a new file called Main Dotty's.
+
+63
+00:03:55,690 --> 00:03:56,110
+‫May not.
+
+64
+00:03:56,140 --> 00:04:00,490
+‫This is going to be the first file that gets executed in any next project, so we'll usually have some
+
+65
+00:04:00,490 --> 00:04:05,170
+‫code inside of here to start up our application and start listening for traffic on the particular port.
+
+66
+00:04:06,780 --> 00:04:12,060
+‫Usually we will create a module and a controller in their own separate files, but right now we're going
+
+67
+00:04:12,060 --> 00:04:15,510
+‫to create the module and the controller directly inside the main text file.
+
+68
+00:04:15,690 --> 00:04:21,360
+‫So right now, all logic inside this file, but we will very, very quickly extract the stuff into separate
+
+69
+00:04:21,360 --> 00:04:21,810
+‫files.
+
+70
+00:04:23,380 --> 00:04:27,670
+‫To create a module and a controller, we're going to add in an important statement at the very top and
+
+71
+00:04:27,670 --> 00:04:34,330
+‫I'm going to import something called controller in module from at Negs Common.
+
+72
+00:04:36,180 --> 00:04:41,400
+‫So, like I mentioned, these are tools that Nesse provides to us to help us make a controller and make
+
+73
+00:04:41,400 --> 00:04:41,970
+‫a module.
+
+74
+00:04:42,940 --> 00:04:47,680
+‫To use them to create a controller, we're going to focus on the controller first, I'm going to create
+
+75
+00:04:47,680 --> 00:04:51,400
+‫a class called App Controller.
+
+76
+00:04:52,530 --> 00:04:59,340
+‫And then right above it, I'm going to add an at symbol controller and then call that like a function.
+
+77
+00:05:00,250 --> 00:05:05,710
+‫So this is referred to as a decorator in this case, this decorator is telling Nest that we are trying
+
+78
+00:05:05,710 --> 00:05:09,310
+‫to create a class that is going to serve as a controller inside of our application.
+
+79
+00:05:09,700 --> 00:05:12,670
+‫It is a class that is going to handle and root incoming requests.
+
+80
+00:05:14,150 --> 00:05:18,140
+‫Nest makes use of decorator's quite heavily, so throughout this course, we're going to have a big
+
+81
+00:05:18,140 --> 00:05:20,480
+‫focus on decorator's how they work and so on.
+
+82
+00:05:20,750 --> 00:05:24,230
+‫But for right now, we're going to have these decorators in and we'll discuss what they're really doing
+
+83
+00:05:24,230 --> 00:05:25,190
+‫for us later on.
+
+84
+00:05:26,390 --> 00:05:31,550
+‫Then inside of our class, we're going to add in a variety of different methods, each method is designed
+
+85
+00:05:31,550 --> 00:05:33,800
+‫to handle one kind of incoming request.
+
+86
+00:05:34,170 --> 00:05:38,940
+‫Specifically, we want to add in an additional method any time we want to have another route inside
+
+87
+00:05:38,940 --> 00:05:39,570
+‫of application.
+
+88
+00:05:40,310 --> 00:05:46,400
+‫So, for example, if we want to handle a get request to the root of our application, we might add
+
+89
+00:05:46,400 --> 00:05:48,710
+‫in a new method here called something like.
+
+90
+00:05:50,070 --> 00:05:51,660
+‫It root root.
+
+91
+00:05:53,040 --> 00:05:58,440
+‫Then whenever someone makes a request to our application, we want to route that request to this method
+
+92
+00:05:58,440 --> 00:06:03,100
+‫right here to do so, we're going to import another helper from the common library.
+
+93
+00:06:03,870 --> 00:06:05,920
+‫This helper is called the Gift Decorator.
+
+94
+00:06:06,300 --> 00:06:11,730
+‫This allows us to create route handlers that respond to incoming requests that have an HTTP method of
+
+95
+00:06:11,730 --> 00:06:13,950
+‫get to write about my method.
+
+96
+00:06:13,980 --> 00:06:17,190
+‫I'm going to put in at git like so.
+
+97
+00:06:18,520 --> 00:06:24,070
+‫And inside my method, any time someone makes a request to our roots that's going to run this method
+
+98
+00:06:24,070 --> 00:06:29,410
+‫right here and then all we have to do to respond to that request is return of value from this method.
+
+99
+00:06:29,920 --> 00:06:32,110
+‫So in this case, I can return simply a string of.
+
+100
+00:06:32,110 --> 00:06:32,680
+‫Hi there.
+
+101
+00:06:34,530 --> 00:06:38,520
+‫Now, in theory, if someone makes a request for application, it will get routed to this method right
+
+102
+00:06:38,520 --> 00:06:42,840
+‫here, we're going to return that string and Northwest is going to automatically take that string and
+
+103
+00:06:42,840 --> 00:06:44,490
+‫send it back to whoever made the request.
+
+104
+00:06:45,600 --> 00:06:49,920
+‫All right, so a lot of talking here, a lot of stuff going on, let's take a pause very, very quickly.
+
+105
+00:06:49,920 --> 00:06:52,320
+‫Come back in just a moment and start to create our module.
+
+106
+00:06:52,750 --> 00:06:56,590
+‫Leslie, want to mention is that these decorator's and things are really confusing right now.
+
+107
+00:06:56,790 --> 00:06:57,500
+‫Don't sweat it.
+
+108
+00:06:57,510 --> 00:07:01,980
+‫As I mentioned, we're going to be going over decorator's a tremendous amount inside this course.
+

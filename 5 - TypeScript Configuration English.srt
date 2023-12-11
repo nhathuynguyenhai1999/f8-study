@@ -1,0 +1,340 @@
+﻿1
+00:00:00,760 --> 00:00:05,590
+‫In between the last video and this one, I opened up my code editor inside my scratch project directory
+
+2
+00:00:05,950 --> 00:00:10,660
+‫so I can see that I've got my packages on file, which we just generated, and then all my dependencies
+
+3
+00:00:10,660 --> 00:00:12,310
+‫are inside that node modules directory.
+
+4
+00:00:12,730 --> 00:00:15,850
+‫Let's open up our packages on file inside of you.
+
+5
+00:00:15,880 --> 00:00:19,600
+‫We've got the dependency section and there's all the dependencies we just installed.
+
+6
+00:00:19,900 --> 00:00:24,280
+‫Now, believe it or not, we can actually understand a little bit around just by taking a look at these
+
+7
+00:00:24,280 --> 00:00:27,250
+‫dependencies and just understand what they do for us.
+
+8
+00:00:27,460 --> 00:00:29,520
+‫So very quickly, what are all these things about?
+
+9
+00:00:30,280 --> 00:00:32,950
+‫All right, so I took that section, put it in this diagram right here.
+
+10
+00:00:33,100 --> 00:00:35,800
+‫And we're going to take a look at four of these different dependencies.
+
+11
+00:00:36,200 --> 00:00:39,720
+‫The first one on that list is Nest James Common.
+
+12
+00:00:40,150 --> 00:00:43,660
+‫The Nest library itself is split out into several different packages.
+
+13
+00:00:43,960 --> 00:00:49,180
+‫The vast majority of functions, classes and whatnot that we're going to use to build a nest application
+
+14
+00:00:49,300 --> 00:00:51,130
+‫are coming from the common package.
+
+15
+00:00:51,410 --> 00:00:54,700
+‫So we're going to be importing that package quite a bit throughout this entire course.
+
+16
+00:00:55,700 --> 00:01:01,400
+‫Next up, we're going to skip over the core one and go to Platform Dasch Express, this one is a little
+
+17
+00:01:01,400 --> 00:01:06,020
+‫bit more interesting, and this is what is going to start to really help us understand what Nest is
+
+18
+00:01:06,020 --> 00:01:06,830
+‫doing internally.
+
+19
+00:01:07,430 --> 00:01:11,790
+‫So internally, Nest itself does not handle incoming requests.
+
+20
+00:01:12,290 --> 00:01:15,530
+‫Instead, here's a quick diagram of what's going on behind the scenes.
+
+21
+00:01:15,830 --> 00:01:20,900
+‫Nest relies upon some outside implementation to handle requests for it.
+
+22
+00:01:21,480 --> 00:01:26,360
+‫So inside of our nest server that you and I are going to eventually create, we are going to have some
+
+23
+00:01:26,360 --> 00:01:31,220
+‫place inside of our code where we have to plug in some kind of HTP implementation.
+
+24
+00:01:31,490 --> 00:01:36,260
+‫We have to provide some kind of server that says here is something that's going to handle incoming requests
+
+25
+00:01:36,560 --> 00:01:39,410
+‫and then eventually respond to them with an outgoing response.
+
+26
+00:01:40,300 --> 00:01:46,360
+‫In the world of Nest, we currently have two options for HTTP server implementations, we can either
+
+27
+00:01:46,360 --> 00:01:51,750
+‫make use of the very popular Library Express G.S. or another one called Fast Wi-Fi.
+
+28
+00:01:52,270 --> 00:01:58,000
+‫So we need to make a choice between both of these HTTP server implementations and essentially drop one
+
+29
+00:01:58,000 --> 00:01:59,980
+‫in for Nest to use.
+
+30
+00:02:01,530 --> 00:02:06,960
+‫Right now, the default is to make use of xpress, so if you ever generate a new nest project right
+
+31
+00:02:06,960 --> 00:02:10,140
+‫now as it stands, you are going to get express by default.
+
+32
+00:02:10,500 --> 00:02:15,660
+‫But we can easily say, you know what, instead of using Express, I want to use force to fly instead,
+
+33
+00:02:15,750 --> 00:02:19,290
+‫which is just another HTTP server implementation.
+
+34
+00:02:19,890 --> 00:02:23,760
+‫Now, as to why you would use one or the other, it comes down to the kind of application you are building
+
+35
+00:02:24,090 --> 00:02:24,660
+‫for you and I.
+
+36
+00:02:24,660 --> 00:02:27,360
+‫Inside this course, we're going to stick with the default of Express.
+
+37
+00:02:28,770 --> 00:02:34,380
+‫So this dependency that we have right here of Platform Dash Express says that we want to install an
+
+38
+00:02:34,380 --> 00:02:38,640
+‫adapter between Xpress and Nest, it's going to make the two of them work together.
+
+39
+00:02:38,850 --> 00:02:44,850
+‫And behind the scenes, Nest is going to use Express for handling all incoming HTTP requests.
+
+40
+00:02:46,250 --> 00:02:46,640
+‫All right.
+
+41
+00:02:46,710 --> 00:02:50,160
+‫Now onto our next dependancy reflect metadata.
+
+42
+00:02:50,660 --> 00:02:55,250
+‫This is a library tied to decorator's if you're not familiar decorator's, don't sweat it.
+
+43
+00:02:55,310 --> 00:02:58,380
+‫We're going to go into more detail on decorator's in just a moment.
+
+44
+00:02:59,060 --> 00:03:01,280
+‫And then finally, our last dependancy there is TypeScript.
+
+45
+00:03:01,700 --> 00:03:04,610
+‫So usually we write nest applications with typescript.
+
+46
+00:03:04,640 --> 00:03:05,990
+‫That is not strictly required.
+
+47
+00:03:05,990 --> 00:03:11,090
+‫You can write nest apps with JavaScript, but by far the most popular way to do this and probably what
+
+48
+00:03:11,090 --> 00:03:15,700
+‫you're going to see on any job or series project you work on is the use of typescript with Nest.
+
+49
+00:03:16,100 --> 00:03:18,320
+‫So we are installing the typescript compiler here.
+
+50
+00:03:19,370 --> 00:03:19,740
+‫All right.
+
+51
+00:03:19,800 --> 00:03:23,840
+‫Now back on track, let's continue with our application, we still haven't really said what this app
+
+52
+00:03:23,840 --> 00:03:27,890
+‫is going to do, but right now, let's just continue doing a little bit of setup and we'll eventually
+
+53
+00:03:27,890 --> 00:03:30,500
+‫decide on what kind of application we want to build in just a moment.
+
+54
+00:03:31,010 --> 00:03:33,110
+‫So at this point in time, we have installed dependencies.
+
+55
+00:03:33,440 --> 00:03:37,830
+‫The next thing we're going to do is set up a typescript compiler config file.
+
+56
+00:03:38,300 --> 00:03:41,190
+‫So this is going to be a classic test configuration file.
+
+57
+00:03:41,240 --> 00:03:45,440
+‫We're going to write out a couple of settings inside of it just to tell typescript how to compile our
+
+58
+00:03:45,440 --> 00:03:45,950
+‫project.
+
+59
+00:03:46,460 --> 00:03:53,180
+‫And usually we do not have to do steps one and two if we are using the next Seelie to generate our project
+
+60
+00:03:53,180 --> 00:03:53,600
+‫for us.
+
+61
+00:03:53,990 --> 00:03:57,560
+‫So these are just steps that we are doing because we are setting up our project from scratch.
+
+62
+00:03:58,430 --> 00:03:58,760
+‫All right.
+
+63
+00:03:58,760 --> 00:04:03,290
+‫So let's go create our config file and set up our typescript compiler very quickly.
+
+64
+00:04:05,050 --> 00:04:10,420
+‫So back inside my editor, I'm going to create a test config, JSON file.
+
+65
+00:04:11,620 --> 00:04:16,390
+‫I'm going to put in a set of curly braces, a string of compiler options.
+
+66
+00:04:18,040 --> 00:04:19,570
+‫And then I'll sign to that in object.
+
+67
+00:04:21,250 --> 00:04:24,640
+‫We'll put in there a couple of different key value pairs, the first one is module.
+
+68
+00:04:25,590 --> 00:04:26,880
+‫Of Common, James.
+
+69
+00:04:27,820 --> 00:04:31,000
+‫Then a target of its seventeen.
+
+70
+00:04:32,600 --> 00:04:43,790
+‫And then experimental decorator's of true and finally imit decorator metadata of true, once again,
+
+71
+00:04:43,790 --> 00:04:47,110
+‫I got to encourage you to double check your spelling on each of these words.
+
+72
+00:04:47,420 --> 00:04:51,170
+‫There's some tricky words inside of your make sure you've got the same spelling as I also make sure
+
+73
+00:04:51,170 --> 00:04:53,260
+‫you've got the same capitalization as well.
+
+74
+00:04:53,600 --> 00:04:58,160
+‫So decorator's should be capitalized, decorator's should be capitalized, metadata should be capitalized
+
+75
+00:04:58,160 --> 00:04:58,610
+‫as well.
+
+76
+00:04:59,240 --> 00:05:03,770
+‫So once again, these are just a couple of settings to get TypeScript to properly transpired our project
+
+77
+00:05:03,770 --> 00:05:06,460
+‫into normal JavaScript code before we eventually run it.
+
+78
+00:05:07,130 --> 00:05:11,240
+‫The two settings that are very relevant for us and we're going to learn a lot more about very quickly
+
+79
+00:05:11,240 --> 00:05:14,840
+‫our experimental decorator's and imit decorator metadata.
+
+80
+00:05:15,170 --> 00:05:19,460
+‫So we are going to come back to this file and go into more detail on what those are all about.
+
+81
+00:05:19,880 --> 00:05:24,860
+‫These two features right here, believe it or not, are at the absolute core of what makes Nest really
+
+82
+00:05:24,860 --> 00:05:25,310
+‫work.
+
+83
+00:05:25,340 --> 00:05:28,340
+‫So it's super important for us to understand those two settings.
+
+84
+00:05:29,800 --> 00:05:31,120
+‫All right, so that's step number two.
+
+85
+00:05:31,600 --> 00:05:35,620
+‫Let's take one more pause right here and then go through step number three and four in just a moment.
+
