@@ -1,0 +1,401 @@
+{
+  "name": "twinny",
+  "displayName": "twinny - AI Code Completion and Chat",
+  "description": "Locally hosted AI code completion plugin for vscode",
+  "version": "3.3.9",
+  "icon": "assets/icon.png",
+  "keywords": [
+    "code-inference",
+    "code-suggestion",
+    "copilot",
+    "localhost",
+    "no-leaks",
+    "private",
+    "twinny",
+    "ai",
+    "ollama",
+    "llama",
+    "development",
+    "extension",
+    "llama-code",
+    "snippets",
+    "chat",
+    "code-snippets",
+    "autocomplete",
+    "intellisense",
+    "llama-ai",
+    "vscode-extension"
+  ],
+  "repository": {
+    "url": "https://github.com/rjmacarthy/twinny"
+  },
+  "license": "MIT",
+  "publisher": "rjmacarthy",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "bugs": {
+    "url": "https://github.com/rjmacarthy/twinny/issues"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Debuggers",
+    "Formatters",
+    "Machine Learning",
+    "Education",
+    "Testing",
+    "Data Science",
+    "Extension Packs",
+    "Linters"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "author": {
+    "name": "rjmacarthy"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorTextFocus",
+          "command": "twinny.explain"
+        },
+        {
+          "when": "editorTextFocus",
+          "command": "twinny.refactor"
+        },
+        {
+          "when": "editorTextFocus",
+          "command": "twinny.addTypes"
+        },
+        {
+          "when": "editorTextFocus",
+          "command": "twinny.addTests"
+        },
+        {
+          "when": "editorTextFocus",
+          "command": "twinny.generateDocs"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "twinny.templates",
+          "when": "view == twinny.sidebar",
+          "group": "navigation@0"
+        },
+        {
+          "command": "twinny.newChat",
+          "when": "view == twinny.sidebar",
+          "group": "navigation@1"
+        },
+        {
+          "command": "twinny.settings",
+          "when": "view == twinny.sidebar",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "twinny.explain",
+        "title": "Twinny - Explain"
+      },
+      {
+        "command": "twinny.refactor",
+        "title": "Twinny - Refactor"
+      },
+      {
+        "command": "twinny.addTypes",
+        "title": "Twinny - Add types"
+      },
+      {
+        "command": "twinny.addTests",
+        "title": "Twinny - Write tests"
+      },
+      {
+        "command": "twinny.generateDocs",
+        "title": "Twinny - Generate docs"
+      },
+      {
+        "command": "twinny.enable",
+        "shortTitle": "Enable twinny",
+        "title": "Enable twinny"
+      },
+      {
+        "command": "twinny.stopGeneration",
+        "title": "Stop generation"
+      },
+      {
+        "command": "twinny.disable",
+        "title": "Disable twinny",
+        "shortTitle": "Disable twinny"
+      },
+      {
+        "command": "twinny.showSidebar",
+        "shortTitle": "Enable twinny sidebar",
+        "title": "Enable twinny sidebar"
+      },
+      {
+        "command": "twinny.settings",
+        "shortTitle": "twinny settings",
+        "title": "Open twinny settings",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "twinny.newChat",
+        "shortTitle": "New chat",
+        "title": "Start a new chat",
+        "icon": "$(comment-discussion)"
+      },
+      {
+        "command": "twinny.templates",
+        "shortTitle": "Edit twinny templates",
+        "title": "Edit twinny templates",
+        "icon": "$(files)"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "Alt+\\",
+        "command": "editor.action.inlineSuggest.trigger",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "CTRL+SHIFT+t",
+        "command": "twinny.sidebar.focus",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "CTRL+SHIFT+/",
+        "command": "twinny.stopGeneration",
+        "when": "twinnyGeneratingText"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "twinny-sidebar-view",
+          "title": "twinny",
+          "icon": "assets/twinny.svg"
+        }
+      ]
+    },
+    "views": {
+      "twinny-sidebar-view": [
+        {
+          "type": "webview",
+          "id": "twinny.sidebar",
+          "name": "twinny",
+          "icon": "assets/twinny.svg",
+          "contextualTitle": "twinny"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "twinny",
+      "properties": {
+        "twinny.enabled": {
+          "order": 0,
+          "type": "boolean",
+          "default": true,
+          "description": "Activates or deactivates the Twinny extension."
+        },
+        "twinny.apiUrl": {
+          "order": 1,
+          "type": "string",
+          "default": "localhost",
+          "description": "URL for the completion API.",
+          "required": true
+        },
+        "twinny.chatApiPath": {
+          "order": 2,
+          "type": "string",
+          "default": "/api/generate",
+          "description": "Endpoint path for chat completions. Defaults to '/api/generate' for Ollama and '/completion' for llama.cpp.",
+          "required": true
+        },
+        "twinny.chatApiPort": {
+          "order": 3,
+          "type": "number",
+          "default": 11434,
+          "description": "The API port usually `11434` for Ollama and `8080` for llama.cpp (May differ depending on API configuration)",
+          "required": true
+        },
+        "twinny.fimApiPort": {
+          "order": 4,
+          "type": "number",
+          "default": 11434,
+          "description": "The API port usually `11434` for Ollama and `8080` for llama.cpp (May differ depending on API configuration)",
+          "required": true
+        },
+        "twinny.fimApiPath": {
+          "order": 5,
+          "type": "string",
+          "default": "/api/generate",
+          "description": "Endpoint path for FIM completions. Defaults to '/api/generate' for Ollama and '/completion' for llama.cpp.",
+          "required": true
+        },
+        "twinny.chatModelName": {
+          "order": 6,
+          "type": "string",
+          "default": "codellama:7b-instruct",
+          "description": "Model identifier for chat completions. Applicable only for Ollama API."
+        },
+        "twinny.fimModelName": {
+          "order": 7,
+          "type": "string",
+          "default": "codellama:7b-code",
+          "description": "Model identifier for FIM completions. Applicable only for Ollama API."
+        },
+        "twinny.fimTemplateFormat": {
+          "order": 8,
+          "type": "string",
+          "enum": [
+            "stable-code",
+            "codellama",
+            "deepseek"
+          ],
+          "default": "codellama",
+          "description": "The prompt format to be used for FIM completions."
+        },
+        "twinny.disableAutoSuggest": {
+          "order": 9,
+          "type": "boolean",
+          "default": false,
+          "description": "Disables automatic suggestions, manual trigger (default shortcut Alt+\\)."
+        },
+        "twinny.contextLength": {
+          "order": 10,
+          "type": "number",
+          "default": 10,
+          "description": "Defines the number of lines before and after the current line to include in FIM prompts.",
+          "required": true
+        },
+        "twinny.debounceWait": {
+          "order": 11,
+          "type": "number",
+          "default": 300,
+          "description": "Delay in milliseconds before triggering the next completion.",
+          "required": true
+        },
+        "twinny.temperature": {
+          "order": 12,
+          "type": "number",
+          "default": 0.2,
+          "description": "Sets the model's creativity level (temperature) for generating completions.",
+          "required": true
+        },
+        "twinny.useMultiLineCompletions": {
+          "order": 13,
+          "type": "boolean",
+          "default": false,
+          "description": "Use multiline completions, can be inaccurate in some cases."
+        },
+        "twinny.maxLines": {
+          "dependencies": {
+            "twinny.useMultiLineCompletions": true
+          },
+          "order": 14,
+          "type": "number",
+          "default": 20,
+          "description": "Maximum number of lines to use for multi line completions. Applicable only when useMultiLineCompletions is enabled."
+        },
+        "twinny.useFileContext": {
+          "order": 15,
+          "type": "boolean",
+          "default": false,
+          "description": "Enables scanning of neighbouring documents to enhance completion prompts. (Experimental)"
+        },
+        "twinny.enableCompletionCache": {
+          "order": 16,
+          "type": "boolean",
+          "default": false,
+          "description": "Caches FIM completions for identical prompts to enhance performance."
+        },
+        "twinny.numPredictChat": {
+          "order": 17,
+          "type": "number",
+          "default": 512,
+          "description": "Maximum token limit for chat completions.",
+          "required": true
+        },
+        "twinny.numPredictFim": {
+          "order": 18,
+          "type": "number",
+          "default": -1,
+          "description": "Maximum token limit for FIM completions. Set to -1 for no limit. Twinny stops at logical line breaks.",
+          "required": true
+        },
+        "twinny.disableServerChecks": {
+          "order": 19,
+          "type": "boolean",
+          "default": false,
+          "description": "Disables automatic LLM server checks at startup, preventing auto-downloads and prompts."
+        },
+        "twinny.useTls": {
+          "order": 20,
+          "type": "boolean",
+          "default": false,
+          "description": "Enables TLS encryption for API connections."
+        },
+        "twinny.apiBearerToken": {
+          "order": 21,
+          "type": "string",
+          "default": "",
+          "description": "Bearer token for secure API authentication."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "vscode:package": "npm exec vsce package",
+    "vscode:publish": "npm exec vsce publish"
+  },
+  "devDependencies": {
+    "@types/handlebars": "^4.1.0",
+    "@types/node": "^16.18.68",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "@types/string_score": "^0.1.31",
+    "@types/vscode": "^1.70.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/vsce": "^2.18.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.20.0",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@microsoft/fast-react-wrapper": "^0.3.22",
+    "@types/react": "^18.2.46",
+    "@vscode/webview-ui-toolkit": "^1.4.0",
+    "classnames": "^2.5.1",
+    "handlebars": "^4.7.8",
+    "handlebars-loader": "^1.7.3",
+    "node-polyfill-webpack-plugin": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
+    "stream-http": "^3.2.0",
+    "string_score": "^0.1.22"
+  }
+}

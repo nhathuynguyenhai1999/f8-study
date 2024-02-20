@@ -1,0 +1,15 @@
+.design {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__img {
+    @include size(60rem, 55rem);
+
+    @media screen and (max-width: $bp-largest) {
+      @include size(40rem, 36rem);
+    }
+  }
+  &__content {
+    margin-left: 11.5rem;
+    max-width: 41rem;
+  }
+}

@@ -1,0 +1,23 @@
+.menu {
+  &__list {
+    list-style: none;
+    @include flex(row, flex-start, center, nowrap);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+    padding: 2rem 1.8rem;
+    transition: all 0.3s;
+
+    &--grey {
+      color: $color-text;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

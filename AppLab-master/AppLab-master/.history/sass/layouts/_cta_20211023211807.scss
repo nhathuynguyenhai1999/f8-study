@@ -1,0 +1,22 @@
+.cta {
+  position: relative;
+
+  &__text {
+    max-width: 63.5rem;
+  }
+
+  &__app {
+    @include flex(row, flex-start, center, nowrap);
+
+    &-img {
+      @include size(18.5rem, 5.6rem);
+      object-fit: cover;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,57 @@
+.container {
+  padding: 4rem 0 1rem;
+  display: flex;
+  color: #666;
+}
+
+.image {
+  width: 14.5rem;
+  height: 3.6rem;
+  object-fit: covers;
+  margin-right: 14rem;
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 33.3333%;
+}
+
+.icon-box {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #eaeaea;
+  font-size: 2rem;
+}
+
+.icon-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.sub {
+  font-size: 1rem;
+}

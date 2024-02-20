@@ -1,0 +1,51 @@
+.header {
+  margin-top: 9.5rem;
+  background-color: $color-grey-light;
+
+  &__nav {
+    @include flex(row, space-between, center, nowrap);
+    margin-bottom: 5.5rem;
+  }
+
+  &__hero {
+    @include flex(row, space-between, center, nowrap);
+
+    &-text {
+      @include size(calc(50% - 5.5rem), 100%);
+      margin-left: 7rem;
+    }
+
+    &-label {
+      @include flex(row, flex-start, center, nowrap);
+      background-color: $color-grey-light-2;
+      display: inline-block;
+      padding: 1rem 5rem 1rem 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        @include size(4rem, 100%);
+        background-color: #feaa25;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &-icon {
+        font-size: 1.6rem;
+        color: $color-white;
+        z-index: 10;
+      }
+
+      &-text {
+        margin-left: 1rem;
+      }
+    }
+
+    &-image {
+      @include size(calc(50% - 5.5rem), 100%);
+    }
+  }
+}

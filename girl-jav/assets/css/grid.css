@@ -1,0 +1,43 @@
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+.grid .wide {
+    max-width: 1200px;
+    margin : 0 auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+@media (min-width: 1113px){
+    .wide {
+        width: 984px;
+    }
+    .row {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    .row .sm-gutter {
+        padding-left: -12px;
+        padding-right: -12px;
+    }
+    .row .sm-gutter .col {
+        padding-left: 12px;
+        padding-right: 12px
+    }
+    .col {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .l-0 {
+        display: none;
+    }
+    .l-1, .l-2, .l-2-4, .l-3, .l-4, .l-5,
+    .l-6,.l-7,.l-8,.l-9,.l-10,.l-11,.l-12{
+        display: block;
+    }
+}

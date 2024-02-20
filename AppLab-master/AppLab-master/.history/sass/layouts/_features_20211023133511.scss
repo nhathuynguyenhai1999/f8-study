@@ -1,0 +1,19 @@
+// Features Top
+.features-top {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__img {
+    @include size(66rem, 86rem);
+  }
+
+  &__text {
+  }
+
+  &__box {
+    &-icon {
+    }
+
+    &-content {
+    }
+  }
+}

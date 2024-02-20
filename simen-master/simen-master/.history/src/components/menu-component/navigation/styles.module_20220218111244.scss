@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.item {
+  &:first-child {
+    color: #e34444;
+  }
+}
+
+.text {
+  color: #333;
+}

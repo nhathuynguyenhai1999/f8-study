@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border: 1px solid #ececec;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+}
+
+.button,
+.icon-box {
+  width: 100%;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  flex-grow: 1;
+}

@@ -1,0 +1,36 @@
+* {
+    margin : 0;
+    padding: 0;
+    top: 0;
+    bottom: 0 ;
+}
+        .column {
+            display:flex;
+            height: 0px;
+        }
+        .header {
+            background-color: orange;
+
+            text-align:left;
+            height: 0px;
+            width: 49%;
+        }
+         .column-left {
+            background-color: blueviolet;
+            height: 200px;
+            width:160px;
+        }
+        .column-middle {
+            background-color:red;
+            height:200px;
+            width:160px;
+        }
+        .column-right {
+            background-color:yellow;
+            height:200px;
+            width:160px;
+        }
+        .footer {
+            background-color:green;
+        }
+    

@@ -1,0 +1,29 @@
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+  font-size: 1.2rem;
+  height: 4rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+
+    &-right {
+      border-left: 1px solid #666;
+      border-right: 1px solid #666;
+      padding: 0 2rem;
+    }
+  }
+
+  &__language {
+    margin-right: 6px;
+  }
+}

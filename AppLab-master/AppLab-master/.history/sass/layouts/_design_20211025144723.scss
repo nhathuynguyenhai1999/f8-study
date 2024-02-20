@@ -1,0 +1,31 @@
+.design {
+  @include flex(row, flex-start, center, nowrap);
+
+  @media screen and (max-width: $bp-lar) {
+    @include flex(column, center, center, nowrap);
+  }
+
+  &__img {
+    @include size(60rem, 55rem);
+
+    @media screen and (max-width: $bp-largest) {
+      @include size(45rem, 40rem);
+    }
+  }
+  &__content {
+    margin-left: 11.5rem;
+    max-width: 41rem;
+
+    @media screen and (max-width: $bp-largest) {
+      margin-left: 10rem;
+    }
+
+    @media screen and (max-width: $bp-lar) {
+      margin-left: 0;
+      margin-top: 2rem;
+      max-width: unset;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

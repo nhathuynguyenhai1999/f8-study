@@ -1,0 +1,20 @@
+.partner {
+  &__text {
+  }
+
+  &__list {
+    list-style: none;
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    @include size(100%);
+  }
+
+  &__img {
+    width: 13rem;
+  }
+}

@@ -1,0 +1,30 @@
+.partner {
+  &__list {
+    list-style: none;
+    @include flex(row, space-between, flex-end, nowrap);
+    width: 80%;
+    margin: 0 auto;
+    @media screen and (max-width: $bp-small) {
+      @include flex(column, center, center, nowrap);
+      text-align: center;
+    }
+  }
+
+  &__item {
+    @include size(calc(20% - 5.6rem));
+
+    @media screen and (max-width: $bp-small) {
+      @include size(100%);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    @include size(100%);
+  }
+
+  &__img {
+    width: 13rem;
+    filter: brightness(60%);
+  }
+}

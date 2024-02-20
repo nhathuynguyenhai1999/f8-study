@@ -1,0 +1,13 @@
+.faq {
+  madx-width: 95rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(column, center, center, nowrap);
+  }
+
+  &__sub-heading {
+    max-width: 64rem;
+    margin-bottom: 8rem;
+  }
+}

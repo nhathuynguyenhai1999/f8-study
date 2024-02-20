@@ -1,0 +1,22 @@
+.header {
+  margin-top: 9.5rem;
+  background-color: $color-grey-light;
+
+  &__nav {
+    @include flex(row, space-between, center, nowrap);
+    margin-bottom: 5.5rem;
+  }
+
+  &__hero {
+    @include flex(row, space-between, center, nowrap);
+
+    &-text {
+      @include size(calc(50% - 5.5rem), 100%);
+      margin-left: 7rem;
+    }
+
+    &-image {
+      @include size(calc(50% - 5.5rem), 100%);
+    }
+  }
+}

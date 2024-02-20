@@ -1,0 +1,13 @@
+.btn {
+  &:link,
+  &:active {
+    display: inline-block;
+    padding: 2rem 4rem;
+    background-repeat: 20rem;
+  }
+
+  &--blue {
+    background-color: $color-primary-dark;
+    color: $color-white;
+  }
+}

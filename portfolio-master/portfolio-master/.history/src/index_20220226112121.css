@@ -1,0 +1,23 @@
+@tailwind base;
+html {
+  scroll-behavior: smooth;
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .paragraph {
+    @apply text-16 text-tx-primary font-medium;
+  }
+  .title {
+    @apply text-[40px] font-semibold mb-1;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .border-gradient {
+    @apply rounded-2xl md:rounded-3xl bg-gradient-to-r p-[2px] from-yellow to-green;
+  }
+}

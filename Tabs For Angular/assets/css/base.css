@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #ee4d2d;
+    --primary-color-rgba: rgb(238 , 75, 43);
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --star-gold-color: #ffce3e;
+    --header-height: 220px;
+    --navbar_height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar_height));
+}
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 100%;
+    line-height: 16px;
+    font-family: sans-serif, "Roboto Light";
+    box-sizing: border-box;
+}
+p {
+    font-size: 1.5rem;
+}
+
+/*Reload*/
+
+.grid_column {
+
+}
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin-top: 0;
+}
+.grid_full-width {
+    width: 100%;
+}
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+/* Test */
+.grid_column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid-column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83%;
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes growth {
+    from {
+        transform: scale(0%);
+    }
+    to {
+        opacity: 1%;
+    }
+}
+/* Modal layout */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+.modal_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal_body {
+    scale(0%): 0.7s;
+    opacity: 1;
+    width: 500px;
+    height: 600px;
+    background-color: var(--white-color);
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+/* Button style */
+.btn {
+    min-width: 123px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 8px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 1.6rem;
+}
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+.btn-btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn-btn--disabled {
+    color: #949494;
+    cursor: default;
+    /*filter: brightness(80%);*/
+    background-color: #c3c3c3;
+}
+.btn-btn--with-icon .btn--size-s {
+    height: 30px;
+    font-size: 12px;
+}
+
+/* Selection */
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-input_label {
+    font-size: 1.4rem;
+}
+
+.select-input_icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    margin: 0 16px 0 8px;
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input_list {
+    display: block;
+
+}
+
+.select-input_list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+    z-index: 1;
+}
+
+.select-input_link {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input_link:hover {
+    color: var(--text-color);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.pagination-item {
+    margin: 0 12px;
+}
+.pagination-item--active .pagination-item_link {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.pagination-item--active .pagination-item_link:hover {
+    background-color: #ed5c3f;
+}
+.pagination-item_link{
+    --height: 30px;
+    display: block;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+}
+.pagination-item_icon {
+
+}

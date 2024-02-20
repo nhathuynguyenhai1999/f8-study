@@ -1,0 +1,14 @@
+.container {
+  padding: 4rem 0 1rem;
+  display: flex;
+}
+
+.image {
+  object-fit: covers;
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

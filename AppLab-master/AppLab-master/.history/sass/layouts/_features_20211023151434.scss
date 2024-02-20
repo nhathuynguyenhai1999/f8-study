@@ -1,0 +1,46 @@
+// Features Top
+.features-top {
+  @include flex(row, flex-start, flex-start, nowrap);
+
+  &__img {
+    @include size(66rem, 86rem);
+    margin-right: 2.5rem;
+  }
+
+  &__text {
+    max-width: 43rem;
+  }
+
+  &__box {
+    @include flex(row, flex-start, center, nowrap);
+    &-icon {
+      margin-right: 3.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5.5rem;
+    }
+  }
+}
+
+// Features Bottom
+.features-bottom {
+  @include flex(row, space-between, center, nowrap);
+
+  &__text {
+  }
+
+  &__content {
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__box {
+    width: calc(50% - 5.2rem);
+    &-icon {
+      margin: 0 auto;
+    }
+
+    &-text {
+    }
+  }
+}

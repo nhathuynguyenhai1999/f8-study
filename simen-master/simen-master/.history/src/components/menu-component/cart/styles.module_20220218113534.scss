@@ -1,0 +1,14 @@
+.search {
+  display: flex;
+  align-items: center;
+  // width: 5rem;
+  font-size: 1 rem;
+  color: #666;
+
+  &-icon-box {
+    font-size: 1.4rem;
+    // position: relative;
+    padding-left: 1.5rem;
+    border-left: 1 px solid #eaeaea;
+  }
+}

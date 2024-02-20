@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.item {
+  &:first-child {
+    color: #e34444;
+  }
+}
+
+.text {
+  color: inherit;
+}

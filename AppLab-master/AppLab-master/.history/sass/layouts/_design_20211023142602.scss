@@ -1,0 +1,6 @@
+.design {
+  @include flex(row, flex-start, center, nowrap);
+  &__content {
+    margin-left: 11.5rem;
+  }
+}

@@ -1,0 +1,18 @@
+// Mixin
+@mixin flex(
+  $dir: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

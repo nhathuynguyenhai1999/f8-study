@@ -1,0 +1,17 @@
+.menu {
+  &__list {
+    list-style: none;
+    @include flex(row, flex-start, center, nowrap);
+  }
+
+  &__item {
+    &--grey {
+      color: $color-text;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 2rem 1.2rem;
+  }
+}

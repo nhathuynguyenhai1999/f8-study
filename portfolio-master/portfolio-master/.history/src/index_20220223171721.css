@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+import "~slick-carousel/slick/slick.css";
+import "~slick-carousel/slick/slick-theme.css";
+
+@layer components {
+  .paragraph {
+    @apply text-16 text-tx-primary font-medium;
+  }
+  .title {
+    @apply text-[40px] font-semibold mb-1;
+  }
+}

@@ -1,0 +1,30 @@
+import React from 'react';
+import styles from './styles.module.scss';
+import { data } from './data.js';
+import logo from '../../../assets/img/logo.png';
+
+function Header() {
+  return (
+    <div className={styles.container}>
+      <img className={styles.image} src={logo} alt="Logo" />
+      <div className={styles.service}>
+        {data.map((item) => (
+          <div key={item.id} className={styles.item}>
+            <div className={styles['icon-box']}>
+              <div className={styles['icon-div']}>
+                <ion-icon className={styles.icon} name={item.icon}></ion-icon>
+              </div>
+            </div>
+            <div className={styles['text-box']}>
+              <a href="/#" className={styles.title}>
+                {item.title}
+              </a>
+              <span className={styles.sub}>{item.sub}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+export default Header;

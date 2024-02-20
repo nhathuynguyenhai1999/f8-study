@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.item {
+  transition: all 0.1s ease;
+  color: #666;
+  &:first-child {
+    color: #e34444;
+  }
+
+  &:hover {
+    color: #e34444 !important;
+  }
+}

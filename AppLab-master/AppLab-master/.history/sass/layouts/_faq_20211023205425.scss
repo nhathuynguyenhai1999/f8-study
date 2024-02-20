@@ -1,0 +1,38 @@
+.faq {
+  max-width: 95rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(column, center, center, nowrap);
+  }
+
+  &__sub-heading {
+    max-width: 64rem;
+    margin-bottom: 6.5rem;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    background-color: $color-primary-light-5;
+    padding: 0 5rem;
+
+    &-content {
+      padding-bottom: 7.5rem;
+    }
+
+    &-icon {
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &--active {
+      h3 {
+        padding-top: 5rem;
+      }
+    }
+  }
+}

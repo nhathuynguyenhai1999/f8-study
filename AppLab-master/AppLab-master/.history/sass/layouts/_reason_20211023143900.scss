@@ -1,0 +1,8 @@
+.reason {
+  max-width: 97rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(column, center, center, nowrap);
+  }
+}

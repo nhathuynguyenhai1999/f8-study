@@ -1,0 +1,21 @@
+.testimonial {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__img {
+    @include size(82rem, 53rem);
+  }
+
+  &__user {
+    &-img {
+      @include size(9rem);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__star {
+    &-icon {
+      fill: #ffcc00;
+    }
+  }
+}

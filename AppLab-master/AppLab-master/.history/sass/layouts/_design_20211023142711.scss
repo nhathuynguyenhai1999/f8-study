@@ -1,0 +1,10 @@
+.design {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__img {
+    @include size(60rem, 55rem);
+  }
+  &__content {
+    margin-left: 11.5rem;
+  }
+}

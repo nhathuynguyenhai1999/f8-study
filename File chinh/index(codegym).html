@@ -1,0 +1,1183 @@
+<html>
+    <!DOCTYPE html>
+    <head><meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <title>Luyện cùng Codegym</title>
+    </head>
+<!--    Tối ưu sử dụng hình ảnh trên trang web?
+1. Sử dụng hình ảnh phù hợp để định dạng
+ - Hình học, vector, v.v: SVG
+ - Bitmap transparent: PNG,WEBP
+ 2. Nén hình ảnh để giảm dung lượng
+ 3. Sử dụng kích thước ảnh phù hợp
+ Original : 4000 x 4000px, Figma: 800px x 800px (CSS), Resize: 1600px x 1600px (2x),
+ đáp ứng tốt cả cho cả màn hình PPI/DPI cao (retina)
+ - PPI (Pixel per inch) , DPI (Dots per inch) 100 DPI, 300 DPI
+ Loại màn hình :
+ 1. Màn hình thường (DPI thấp 1:1) : 800px x 800px, 1600px x 1600px (2x),
+ 2. Màn hình retina (DPI cao 2:1) : 800px x 800px , 1600px x 1600px (2x)
+ ## Trang web sử dụng nhiều hình ảnh
+ Thiết bị:
+ 1. Mobile : 1600px x 1600px => Tốn băng thông , chờ lâu hơn => Giảm trải nghiệm
+ 2. Table: 1600px x 1600px
+ 3. Dekstop: 1600px x 1600px-->
+<!--## Bài toán 1
+1. Mobile: 50px x 50px
+2. Tablet: 100px x 100px
+3. Dekstop: 200px x 200px
+# Bài toán 2
+- Desktop : /img/img-1.png
+- Desktop : /img/img-2.png-->
+    <script>
+        let a = number(prompt('Nhap so a'));
+        let b = number(prompt('Nhap so b'));
+        let c = number(prompt('Nhap so c'))
+        if (a>b) {
+            if(i % x === 0){
+                console.log(i);
+            }else {
+                console.log('Khong co so nao chia het cho x trong khoang tu a den b');
+            }
+        }
+    </script>
+    <body>
+        <script>
+            let i = +prompt('Nhập số:')
+            let flag= false;
+    
+            for (let j=1; j<i; j++) {
+                if (i%j ==0) {
+                    flag=true;
+                    break;
+                }   
+            }
+            if (flag ==1){
+                alert('Đây không phải là số nguyên tố')
+            }
+            else {
+                alert('Đây là số nguyên tố')
+            }
+        </script>
+        <h1>Nguyễn Hải Nhật Huy</h1>
+        <img src="./352348395_1314159119474911_8788701553795471763_n.jpg" width="100" height="100">
+        <table style="margin: 12px; border: 12px solid black">
+            <thead>
+                <th>Tuổi</th>
+                <th>Nghề nghiệp</th>
+                <th>Chức vụ</th>
+                <th>Tên công ty</th>
+                <th>Địa chỉ</th>
+                <th>Tên trường đã tốt nghiệp</th>
+                <th>Niên khóa</th>
+                <th>Xếp hạng tốt nghiệp</th>
+                <th>Sở thích</th>
+                <th></th>
+                <tr>
+                    <td>24</td>
+                    <td>Đồ họa</td>
+                    <td>Nhân viên thử việc</td>
+                    <td>Công ty TNHH MTV Brycen Việt Nam</td>
+                    <td>27 Nguyễn Văn Cừ, TP Huế</td>
+                    <td>Trường Đại học Khoa Học Huế</td>
+                    <td>09/2017 - 6/2022</td>
+                    <td>Khá</td>
+                    <td>
+                        <ol>
+                            <li>Code</li>
+                            <li>Bóng đá</li>
+                            <li>Bơi lội</li>
+                            <li>Gym</li>
+                            <li>Du lịch</li>
+                        </ol>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+        <form>
+            <label for="hoten">Họ tên</label><br/>
+            <input type="hoten" id="hoten" name="hoten" placeholder="Nhập họ tên">
+            <button>Nhập vào</button><br/>
+            <label for="tendem">Tên đệm</label>
+            <input type="tendem" id="tendem" name="tendem">
+            <button>Nhập vào</button>            
+        </form>
+        <hr/>
+        <h1>Bài tập ngày 19/07</h1>
+            <label for="firstname"
+            >Enter your first name</label>
+            <input type="firstname" id="firstname" name="firstname"
+            placeholder="enter your first name"><br/>
+            <label for="lastname">
+                Enter your last name
+            </label>
+            <input type="lastname" id="lastname" name="lastname" ><br/>
+            <label for="password">Enter your password</label>
+            <input type="password" id="password" name="password"><br/>
+            <label for="password-reset">ReEnter your password</label>
+            <input type="password-reset" id="password-reset" 
+            name="password-reset"><br/><br/>
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="email"><br/>
+            <label for="number">Enter your number</label>
+            <input type="number" id="number" name="number"><br/>
+            <label for="address">Enter your address</label>
+            <textarea name="address" form="address"></textarea><br/>
+            <label for="gender">Select your gender</label>
+            <input type="radio" id="gender" name="gender" value="male"/>Male  
+            <input type="radio" id="gender" name="gender" value="female"/>Female <br/> 
+            <br/>
+            <label for="hobbies">Select your hobbies</label>
+            <input type="radio" id="hobbies" name="hobby1">hobby1
+            <input type="radio" id="hobbies" name="hobby2">hobby2
+            <input type="radio" id="hobbies" name="hobby3">hobby3<br/>
+            <label for="dob">Select your date of birth</label>
+            <input type="dob" id="dob" name="dob" placeholder="mm/dd/yyyy"><br/>
+            <label for="country">Select your country</label>
+            <select name="country" id="register_country" style="width:160px">
+                <option value="vietnam" placeholder="select your country">vietnam</option>
+                <option value="india">india</option>
+                <option value="pakistan">pakistan</option>
+                <option value="africa">africa</option>
+                <option value="china">china</option>
+                <option value="other">other</option>
+              </select><br/>
+            <label for="file">Upload your pic</label>
+            <button>Choose file</button> No file choosen<br/>
+            <button>Save your data</button>
+            <button>Reset your data</button>
+        </form>
+        <hr/>
+        <div class="container">
+            <div class="avatar">
+             <img src="./352348395_1314159119474911_8788701553795471763_n.jpg" alt=""
+             style="width:200px;
+             height:200px;
+             object-fit: cover;
+             border-radius: 50%;">
+            </div>
+            <div class="name">
+                 <h1>NGUYỄN HẢI NHẬT HUY</h1>
+                 <div class="specialize">Frond-End Developer</div>
+                 <ul class="contact">
+                     <li>
+                         <span>P</span> +84848101999
+                     </li>
+                     <li>
+                         <span>E</span> nhathuynuynhai@gmail.com
+                     </li>
+                     <li>
+                         <span>W</span> lundevweb.com
+                     </li>
+                 </ul>
+            </div>
+            <div class="info">
+                 <ul>
+                     <li>From <b>Huế</b> - Việt Nam</li>
+                     <li>01/01/0101</li>
+                     <li>AAAA University</li>
+                 </ul>
+            </div>
+            <div class="intro">
+             <h2>INTRODUCE MYSELT</h2>
+             Tôi tốt nghiệp 1 năm trường Đại học Khoa Học Huế, chuyên ngành Mạng máy tính.
+             Tôi có con đường lập trình viên từ khi mình bước vào năm cuối đại học, dù giai đoạn đầu rất là khó khăn
+             nhưng tìm được đam mê nghề này khi tôi biết đến môn Lập trình viên này , tôi đã từng làm một số dự án nhỏ
+             cho một công ty tư nhân tuy nhiên sản phẩm lại không được như mong muốn nhưng vì đam mê nên sẽ không dừng lại.
+            </div>
+            <div class="experience">
+             <h2>EXPERIENCE</h2>
+     
+             <div class="item">
+                 <h4>Student</h4>
+                 <div class="time">
+                    <span>2017 - 2022</span>
+                    <span>Trường Đại học Khoa học Huế</span>
+                 </div>
+                 <div class="des">
+                     Tốt nghiệp bằng cử nhân Loại tổng điểm là 8,64 đầu ra. 
+                     Từng tham dự lễ hội tham gia trao đổi đổi mới và sáng tạo tháng 4 năm 2022.<br/>
+                 </div>
+             </div>
+     
+                 <div class="item">
+                     <h4>Student</h4>
+                     <div class="time">
+                        <span>2015 - 2019</span>
+                        <span>ACDC University</span>
+                     </div>
+                     <div class="des">
+                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                         Architecto accusantium officia nobis quas excepturi consectetur 
+                         quidem quia est neque doloremque.
+                     </div>
+                 </div>
+                 <h2 class="skills">
+                     SKILLS
+                 </h2>
+                 <ul>
+                     <li>HTML</li>
+                     <li>CSS</li>
+                     <li>Bootstrap</li>
+                     <li>Javascript</li>
+                     <li>PHP</li>
+                     <li>MySql</li>
+                     <li>Git</li>
+                     <li>Laravel</li>
+                 </ul>
+     
+            </div>
+            <div class="project">
+             <h2>PROJECTS</h2>
+             <div class="item">
+                 <h4>Website a self</h4>
+                 <div class="time">
+                     2020
+                 </div>
+                 <div class="web">
+                     nhathuynguyenhai1999.github.io/bds-datvang-chunggroup
+                     nhathuynguyenhai1999.github.io/datvangchunggroup
+                     nhathuynguyenhai1999.github.io/glitchdatvangchunggroup
+                 </div>
+                 <div class="location">
+                     Intern Design BPO
+                 </div>
+                 <div class="des">
+                     Trong thời gian làm việc tại công ty TNHH MTV Brycen Việt Nam, mỗi ngày công ty
+                     sẽ đưa ra một 6-7 bức hình , nhiệm vụ của học việc đồ họa BPO là vẽ đồ lại và chạy
+                     3D cho mỗi bức hình và cố gắng hoàn thành trong một giờ nhất định theo chỉ định của
+                     công ty.<br/>
+                     <ul>
+                         <li>Nhập dữ liệu và chạy chương trình cho một dự án có tên là
+                            Amazon Web Services của ArabianOubs
+                         </li>
+                         <li>Viết content đăng bài tuyển dụng và đăng sản phẩm của công ty đem ra thị trường.</li>
+                         <li>Lập trang web cho công ty giới thiệu hình thành, các mặt hàng cùng với các tin tức.</li>
+                     </ul>
+                 </div>
+             </div>
+     
+             <div class="item">
+                 <h4>Học vấn</h4>
+                 <div class="time">
+                     2/2023 - 4/2023
+                 </div>
+                 <div class="web">
+                     www.batdongsandatvangchunggroup.wordpress.com
+                 </div>
+                 <div class="location">
+                     Intern Marketing - Content
+                 </div>
+                 <div class="des">
+                     Làm trang web của công ty, viết bài đăng bài sản phẩm của công ty
+                     <ul>
+                         <li>Nhân viên xuất sắc tuần đầu tiên.</li>
+                         <li>Nhân viên cày ải khiếp tháng 2.</li>
+                         <li>Nhân viên bị quýt nhất tháng.</li>
+                     </ul>
+                 </div>
+             </div>
+     
+             <div class="item">
+                 <h4>Tiếng Anh B1</h4>
+                 <div class="time">
+                     3/2019 - 12/2021
+                 </div>
+                 <div class="web">
+                     www.lundevweb.com
+                 </div>
+                 <div class="location">
+                     Student
+                 </div>
+                 <div class="des">
+                     Đây là tín chỉ yêu cầu ra của trường trong thời gian là sinh viên.<br/>
+                     Đây cũng là tín chỉ ngoại ngữ cao nhất của 1 sinh viên để xết tốt nghiệp.<br/>
+                     <ul>
+                         <li>Lorem ipsum dolordolores.</li>
+                         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, dolores.</li>
+                         <li>Lorem ipsum dolor sit amet consectetur dolores.</li>
+                     </ul>
+                 </div>
+             </div>
+            </div>
+         </div>
+    </body>
+    <hr/>
+    <body>
+        <div class="header"><h1>Header</h1></div>
+    <div class="column">
+        <div class="column-left">Column Left</div>
+    <div class="column-right">Column Right</div>
+    <div class="column-middle">Column Middle</div>
+    </div>
+    <div class="footer">Footer</div>
+    </body>
+    <style>
+        .column {
+            display:flex;
+            height: 200px;
+        }
+        .header {
+            background-color: orange;
+
+            text-align:left;
+            height: 200px;
+            width: 490%;
+        }
+        .column-left {
+            background-color:blueviolet;
+            height: 200px;
+            width:160px;
+        }
+        .column-middle {
+            background-color:red;
+            height:200px;
+            width:160px;
+        }
+        .column-right {
+            background-color:yellow;
+            height:200px;
+            width:160px;
+        }
+        .footer {
+            background-color:green;
+        }
+    </style>
+    <script>
+        const form = document.getElementById('form');
+    const formBody = document.querySelector('#formBody');
+    function formInput(props, index) {
+        if (props.type === 'select') {
+            return formSelect(props, index)
+        }
+        return `<div>
+                    <label>${props.label}</label>
+                        <input class="input-custom" 
+                        type="${props.type || 'text'}" name="${props.name}" 
+                        onblur="onFocus(${index})" 
+                        ${props.pattern ? `pattern=${props.pattern}` : ""} 
+                        value="${props.value}"
+                        ${props.require ? 'required' : ''} /></br>
+                    <span class="error">${props.message}</span>
+                </div>`
+    }
+    function formSelect(props, index) {
+        let optionsStr = "";
+        props.options.forEach(e => {
+            optionsStr += `<option value="${e.value}">${e.name}</option>`;
+        })
+    
+        return `<div>
+                    <label>${props.label}</label>
+                        <select class="input-custom" 
+                        type="${props.type || 'text'}" name="${props.name}" 
+                        onblur="onFocus(${index})" 
+                        ${props.pattern ? `pattern=${props.pattern}` : ""} 
+                        value="${props.value}"
+                        ${props.require ? 'required' : ''}>
+                            <option value>---Choose---</option>
+                            ${optionsStr}
+                        </select>
+                        </br>
+                        <span class="error">${props.message}</span>
+                </div>`
+    }
+    const onFocus = (index) => {
+        const inputsForm = document.querySelectorAll('#formBody .input-custom')
+        inputsForm[index].setAttribute("focused", "true");
+    }
+    
+    
+    const inputs = [
+        {
+            label: "Username",
+            name: "username",
+            pattern: "^$|[A-Za-z]{6,20}",
+            message: "Username must have minimun is 6 charaters and maximun is 20 charaters",
+            require: false,
+            value: ""
+        },
+        {
+            label: "Email",
+            name: "email",
+            type: "email",
+            message: "Email invalid",
+            require: true,
+            value: ""
+        },
+        {
+            label: "Gender",
+            name: "gender",
+            type: "select",
+            message: "Email invalid",
+            options: [{ value: 1, name: 'Male' }, { value: 2, name: 'Female' }]
+        }
+    ]
+    function renderForm() {
+        formBody.innerHTML = "";
+        inputs.forEach((input, index) => {
+            formBody.innerHTML += formInput(input, index);
+        })
+    }
+    
+    function getDataFromForm() {
+        const data = new FormData(form);
+        return Object.fromEntries(data.entries())
+    }
+    document.addEventListener('invalid', (function () {
+        return function (e) {
+            e.preventDefault();
+            e.target.onblur();
+        };
+    })(), true);
+    renderForm();
+    // new DataTable('#example', {
+    //     ajax: 'scripts/server_processing.php',
+    //     processing: true,
+    //     serverSide: true
+    // });
+    $(function () {
+        const dataGrid = $("#dataGrid").dxDataGrid({
+            dataSource: employees,
+            keyExpr: "EmployeeID",
+    
+            columns: [
+                {
+                    dataField: "TitleOfCourtesy",
+                    // ...
+                    groupIndex: 0,
+                },
+                {
+                    dataField: "FullName",
+                }, {
+                    dataField: "Position"
+                }, {
+                    dataField: "BirthDate",
+                    dataType: "date"
+                }, {
+                    dataField: "HireDate",
+                    dataType: "date"
+                },
+                // ...
+                {
+                    dataField: "Country",
+                    cellTemplate: function (container, info) {
+                        console.log('template')
+                        const currentEmployeeData = info.data;
+                        container.append(
+                            $(`<div>Hello ${currentEmployeeData.Country}</div>`)
+                        );
+                    }
+                },
+                {
+                    type: "buttons",
+                    buttons: ["edit", {
+                        text: "Edit",
+                        hint: "My Command",
+                        onClick: function (e) {
+                            console.log(e)
+                        }
+                    }]
+                }
+                // ...
+            ],
+            selection: { mode: "single" },
+            onSelectionChanged: function (e) {
+                console.log('demo')
+                e.component.byKey(e.currentSelectedRowKeys[0]).done(employee => {
+                    if (employee) {
+                        $("#selected-employee").text(`Selected employee: ${employee.FullName}`);
+                    }
+                });
+            },
+            customizeColumns: function (columns) {
+                console.log(columns);
+            },
+            grouping: {
+                autoExpandAll: true,
+            },
+        });
+    });
+    let employees = [{
+        "EmployeeID": 1,
+        "FullName": "Nancy Davolio",
+        "Position": "Sales Representative",
+        "TitleOfCourtesy": "Ms.",
+        "BirthDate": "1968-12-08T00:00:00.000Z",
+        "HireDate": "2011-05-01T00:00:00.000Z",
+        "Address": "507 - 20th Ave. E.\r\nApt. 2A",
+        "City": "Seattle",
+        "Region": "WA",
+        "PostalCode": "98122",
+        "Country": "USA",
+        "HomePhone": "(206) 555-9857",
+        "Extension": "5467",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/06.png",
+        "Notes": "Education includes a BA in psychology from Colorado State University in 1990.  She also completed \"The Art of the Cold Call.\"  Nancy is a member of Toastmasters International.",
+        "ReportsTo": 2
+    }, {
+        "EmployeeID": 2,
+        "FullName": "Andrew Fuller",
+        "Position": "Vice President, Sales",
+        "TitleOfCourtesy": "Dr.",
+        "BirthDate": "1972-02-19T00:00:00.000Z",
+        "HireDate": "2011-08-14T00:00:00.000Z",
+        "Address": "908 W. Capital Way",
+        "City": "Tacoma",
+        "Region": "WA",
+        "PostalCode": "98401",
+        "Country": "USA",
+        "HomePhone": "(206) 555-9482",
+        "Extension": "3457",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/02.png",
+        "Notes": "Andrew received his BTS commercial in 1994 and a Ph.D. in international marketing from the University of Dallas in 2001.  He is fluent in French and Italian and reads German.  He joined the company as a sales representative, was promoted to sales manager in January 2012 and to vice president of sales in March 2013.  Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.",
+        "ReportsTo": null
+    }, {
+        "EmployeeID": 3,
+        "FullName": "Janet Leverling",
+        "Position": "Sales Representative",
+        "TitleOfCourtesy": "Ms.",
+        "BirthDate": "1983-08-30T00:00:00.000Z",
+        "HireDate": "2011-04-01T00:00:00.000Z",
+        "Address": "722 Moss Bay Blvd.",
+        "City": "Kirkland",
+        "Region": "WA",
+        "PostalCode": "98033",
+        "Country": "USA",
+        "HomePhone": "(206) 555-3412",
+        "Extension": "3355",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/09.png",
+        "Notes": "Janet has a BS degree in chemistry from Boston College (2004).  She has also completed a certificate program in food retailing management.  Janet was hired as a sales associate in 2011 and promoted to sales representative in February 2012.",
+        "ReportsTo": 2
+    }, {
+        "EmployeeID": 4,
+        "FullName": "Margaret Peacock",
+        "Position": "Sales Representative",
+        "TitleOfCourtesy": "Mrs.",
+        "BirthDate": "1957-09-19T00:00:00.000Z",
+        "HireDate": "2012-05-03T00:00:00.000Z",
+        "Address": "4110 Old Redmond Rd.",
+        "City": "Redmond",
+        "Region": "WA",
+        "PostalCode": "98052",
+        "Country": "USA",
+        "HomePhone": "(206) 555-8122",
+        "Extension": "5176",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/04.png",
+        "Notes": "Margaret holds a BA in English literature from Concordia College (1978) and an MA from the American Institute of Culinary Arts (1986).  She was assigned to the London office temporarily from July through November 2012.",
+        "ReportsTo": 2
+    }, {
+        "EmployeeID": 5,
+        "FullName": "Steven Buchanan",
+        "Position": "Sales Manager",
+        "TitleOfCourtesy": "Mr.",
+        "BirthDate": "1975-03-04T00:00:00.000Z",
+        "HireDate": "2012-10-17T00:00:00.000Z",
+        "Address": "14 Garrett Hill",
+        "City": "London",
+        "Region": "UK",
+        "PostalCode": "SW1 8JR",
+        "Country": "UK",
+        "HomePhone": "(71) 555-4848",
+        "Extension": "3453",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/05.png",
+        "Notes": "Steven Buchanan graduated from St. Andrews University, Scotland, with a BSC degree in 1996.  Upon joining the company as a sales representative in 2012, he spent 6 months in an orientation program at the Seattle office and then returned to his permanent post in London.  He was promoted to sales manager in March 2013.  Mr. Buchanan has completed the courses \"Successful Telemarketing\" and \"International Sales Management.\"  He is fluent in French.",
+        "ReportsTo": 2
+    }, {
+        "EmployeeID": 6,
+        "FullName": "Michael Suyama",
+        "Position": "Sales Representative",
+        "TitleOfCourtesy": "Mr.",
+        "BirthDate": "1983-07-02T00:00:00.000Z",
+        "HireDate": "2012-10-17T00:00:00.000Z",
+        "Address": "Coventry House\r\nMiner Rd.",
+        "City": "London",
+        "Region": "UK",
+        "PostalCode": "EC2 7JR",
+        "Country": "UK",
+        "HomePhone": "(71) 555-7773",
+        "Extension": "428",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/01.png",
+        "Notes": "Michael is a graduate of Sussex University (MA, economics, 2003) and the University of California at Los Angeles (MBA, marketing, 2006). He has also taken the courses \"Multi-Cultural Selling\" and \"Time Management for the Sales Professional.\"  He is fluent in Japanese and can read and write French, Portuguese, and Spanish.",
+        "ReportsTo": 5
+    }, {
+        "EmployeeID": 7,
+        "FullName": "Robert King",
+        "Position": "Sales Representative",
+        "TitleOfCourtesy": "Mr.",
+        "BirthDate": "1980-05-29T00:00:00.000Z",
+        "HireDate": "2012-01-02T00:00:00.000Z",
+        "Address": "Edgeham Hollow\r\nWinchester Way",
+        "City": "London",
+        "Region": "UK",
+        "PostalCode": "RG1 9SP",
+        "Country": "UK",
+        "HomePhone": "(71) 555-5598",
+        "Extension": "465",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/07.png",
+        "Notes": "Robert King served in the Peace Corps and traveled extensively before completing his degree in English at the University of Michigan in 2002, the year he joined the company.  After completing a course entitled \"Selling in Europe,\" he was transferred to the London office in March 2013.",
+        "ReportsTo": 5
+    }, {
+        "EmployeeID": 8,
+        "FullName": "Laura Callahan",
+        "Position": "Inside Sales Coordinator",
+        "TitleOfCourtesy": "Ms.",
+        "BirthDate": "1978-01-09T00:00:00.000Z",
+        "HireDate": "2012-03-05T00:00:00.000Z",
+        "Address": "4726 - 11th Ave. N.E.",
+        "City": "Seattle",
+        "Region": "WA",
+        "PostalCode": "98105",
+        "Country": "USA",
+        "HomePhone": "(206) 555-1189",
+        "Extension": "2344",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/08.png",
+        "Notes": "Laura received a BA in psychology from the University of Washington.  She has also completed a course in business French.  She reads and writes French.",
+        "ReportsTo": 2
+    }, {
+        "EmployeeID": 9,
+        "FullName": "Brett Wade",
+        "Position": "Sales Representative",
+        "TitleOfCourtesy": "Mr.",
+        "BirthDate": "1986-01-27T00:00:00.000Z",
+        "HireDate": "2012-11-15T00:00:00.000Z",
+        "Address": "7 Houndstooth Rd.",
+        "City": "London",
+        "Region": "UK",
+        "PostalCode": "WG2 7LT",
+        "Country": "UK",
+        "HomePhone": "(71) 555-4444",
+        "Extension": "452",
+        "Photo": "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/03.png",
+        "Notes": "Brett has a BA degree in English from St. Lawrence College.  He is fluent in French and German.",
+        "ReportsTo": 5
+    }];      
+    </script>
+    <hr/>
+    <body>
+        <p>We welcome you to join our Discord community of fellow students, developers,
+            and engineers. Keep up with the latest news and announcements or start a discussion
+            <a href="https://discord.gg/vvcyvjDkdC" rel="noopener noreferrer" target="_blank">by clicking here</a>: <a href="https://discord.gg/vvcyvjDkdC" rel="noopener noreferrer" target="_blank">
+            <strong>https://discord.gg/vvcyvjDkdC</strong></a></p>
+    </body>
+    <p style="display:inline-block;border: 12px solid blue">
+        <strong>Có nên mua nhà nhưng diện tích gấp đôi</strong><br/>
+        Tôi băn khoăn giữa việc mua căn nhà ở ngõ to hay chọn một căn trong hẻm nhưng diện tích gấp đôi.<br/>
+        Tôi chuẩn bị bán căn hộ được khoảng 3 tỷ 5 đồng , cùng với một khoản tiết kiệm của 2 vợ chồng 1 tỷ rưỡi
+        . Sau nhiều năm ở chung cư, vợ chồng tôi muốn chuyển xuống ở đất.<br/>
+        Với tài chính như trên, tôi được môi giới giới thiệu cho một căn nhà tại phường 9 quận 8, TP HCM, diện
+        tích 35 m2, giá 5 tỷ đồng nằm trong ngõ to ô tô ra vào được.
+        Cách đây không xa, tôi xem được một căn tích rộng 65 m2 nhưng nằm trong hẻm nhỏ hơn, oto không vào được
+        nên có giá rẻ 4 tỷ đồng.
+        Cả hai căn đều một trệt, hai lầu, có 3 phòng ngủ.<br/>
+        Mong chuyên gia tư vấn giúp tôi nên chọn phương án nào?
+    </p>
+    <p>
+        <i style="font-style: italic;text-align:right">Độc giả Minh Minh</i>
+    </p>
+    <p style="border: 14px solid red;">
+        <strong>Chuyên gia tư vấn:</strong>
+        Yếu tố quan trọng nhất đem lại giá trị cho bất động sản là vị trí.
+        Cả hai phương án bạn nêu đều có ưu, nhược điểm riêng, tuy nhiên với mục tiêu để ở hay khai thác kinh
+        doanh thì nhà ở ngõ to luôn có lợi thế hơn nhà trong hẻm nhỏ.<br/>
+        Với nhà nhỏ nằm trong ngõ to, nhược điểm lớn nhất là diện tích căn nhà hạn chế, thường dưới 50 m2.
+        Tuy nhiên giải pháp khắc phục là xây cao tầng để tạo thêm không gian cho gia đình đông người.<br/>
+        Với nhà nhỏ trong ngõ to, nhược điểm lớn nhất là diện tích căn nhà hạn chế, thường dưới 50 m2.
+        Tuy nhiên giải pháp khắc phục là xây cao tầng để tạo thêm không gian cho gia đình đông người.<br/>
+        Còn ưu điểm là vị trí ngôi nhà trong ngõ, hẻm đủ rộng (tối thiểu 3,5 m) để xe ôtô con di chuyển được.
+        Mỗi gia đình sau khi sở hữu nhà đều tính đến việc mua ôtô thì bất động sản nằm ở con đường đủ rộng sẽ được
+        ưa chuộng.<br/>
+        Vị trí cũng quyết định đến khả năng tăng giá và tốc độ thanh khoản của căn nhà.
+        Những căn nhà nằm ở ngõ to còn nhiều dư địa tăng giá theo thời gian.
+        So với hẻm nhỏ, nhà ở ngõ to sẽ tăng giá trước một nhịp khoảng 12 tháng, trung bình tăng 5% một năm.
+        Trong trường hợp chủ nhà muốn bán nhà để chuyển đổi không gian sống hay để kinh doanh, cho thuê,
+        thanh khoản cũng nhanh hơn.<br/>
+    </p>
+    <p style="border: 1px solid black; display:inline-block">
+        Còn nhà to nằm trong hẻm nhỏ, ưu điểm lớn nhất là giá rẻ hơn tương đối so với nhà ngõ lớn hay nhà mặt phố,
+        do đó cùng số tiền bạn có thể mua được một căn diện tích rộng rãi hơn.<br/>
+        Thực tế, nhà ở hẻm nhỏ có nhiều nhược điểm về quy hoạch, lưu thông, tốc độ tăng giá và môi trường sống.
+        TP HCM có rất nhiều con hẻm nằm trong diện phải chỉnh trang, quy hoạch lại do hẹp hơn chiều rộng tối thiểu 3,5m.
+        Do đó mua nhà ở những con hẻm này, bạn sẽ dễ gặp rủi ro quy hoạch treo và không được sửa chữa, cơi nới, thay đổi
+        hiện trạng căn nhà.
+        Nếu không kiểm tra kỹ, bạn có thể mua phải căn nhà đã cơi nới, lấn chiếm lòng đường, xây dựng trái phép dẫn đến việc
+        công trình không được hoàn công.<br/>
+        Tiềm năng tăng giá hay tốc độ thanh khoản của ngôi nhà sẽ càng bị giảm sút nếu hẻm càng nhỏ.
+        Những căn nhà này thường dễ bị ép giá khi bạn muốn bán hoặc bị ngân hàng định giá thấp khi thế chấp vay vốn.
+        Điều này dẫn đến khả năng thanh khoản kém và bạn sẽ mất nhiều thời gian để chốt giao dịch hơn.<br/>
+        Do đó, bạn cân nhắc lựa chọn nhà ở tại những con ngõ, hẻm to có ý định chuyển từ chung cư sang nhà đất.
+        Một số lưu ý dành cho bạn là nên chọn nhà nằm ở ngõ thông ra đường lớn dễ đi lại, nền đất cao để tiện sinh
+        hoạt vào mùa mưa và dễ xây mới hơn.<br/>
+    </p>
+    <div class="tac-gia-trich-dan">
+        Ông Trần Khánh Quang - Tổng giám đốc Công ty Việt Hòa
+    </div>
+    <div class="vnexress">
+        <h3>Nhiều doanh nghiệp bất động sản nợ thuế thành tỷ đồng</h3>
+        <strong>Nhiều doanh nghiệp tại TP HCM như là Đất Xanh, Golden Hill...nợ thuế nghìn tỷ đồng
+            <br/>
+        </strong>
+        <p style="color: white; background-color: blueviolet; border: 12px solid blue;font-family:serif">
+            Cục thuế TP HCM vừa công khai 100 doanh nghiệp nợ thuế tính đến quý II với tổng số tiền
+            hơn 7.860 tỷ đồng (gồm tiền thuế, phạt, chậm nộp).
+            Chiếm phần lớn danh sách này là nhóm doanh nghiệp bất động sản, xây dựng.
+            Trong đó, đứng đầu là Công ty cổ phần Đầu tư Golden Hill, chủ đầu tư dự án cao tốc phức hợp
+            tại 87 Cống Huỳnh (TP HCM), nợ thuế 1.290 tỷ đồng.<br/>
+            Cách đây hai năm, doanh nghiệp này từng phát hành thành công 5.760 tỷ đồng trái phiếu chỉ trong
+            thời gian ngắn, đảm bảo bằng tài sản liên quan dự án 87 Cống Quỳnh.
+            Mục đích theo công bố của lô trái phiếu này là nhằm thanh toán khoản phải trả với các đối tác liên
+            quan đến việc thanh lý các hợp đồng đầu tư với tổng dư nợ gốc hơn 8.000 tỷ đồng.<br/>
+            Một doanh nghiệp khác nợ thuế hơn 1.000 tỷ đồng là Công ty cổ phần Phát triển Địa ốc Sông Tiên (STC),
+            doanh nghiệp liên quan Tập đoàn Suối Tiên, chủ sở hữu của Khu du lịch Văn hóa Suối Tiên.<br/>
+            Tập đoàn Hưng Thịnh sở hữu 60% cổ phần của Địa ốc Sông Tiên vào 2020 và là đối tác chiến lược của doanh nghiệp này,
+            phát triển dự án Angel Island, đảo nước ngọt nằm trên sông Soài Rạp, Đồng Nai, hay dự án Nhơn Phước.
+            Tính đến hết quý II, Tập đoàn Hưng Thịnh và Công ty cổ phần Hưng Thịnh Land cũng đang nợ thuế hơn 855 tỷ đồng.<br/>
+            Nhiều doanh nghiệp nhóm bất động sản khác tại TP HCM cũng trong tình trạng nợ thuế, trong đó gồm các doanh nghiệp lớn
+            như Tập đoàn Đất Xanh nợ 210 tỷ đồng, Công ty cổ phần Phát triển và Kinh doanh Nhà (HDTC) nợ 75 tỷ đồng và Công ty cổ phần
+            Tư vấn – Thương mại - Dịch vụ địa ốc Hoàng Quân nợ thuế 16 tỷ đồng...<br/>
+            Phần lớn doanh nghiệp bất động sản đều trong tình thế khó khăn, thanh khoản hạn chế, đặc biệt sau "cú sốc" trái phiếu Doanh
+            nghiệp vừa qua.<br/>
+            Danh sách nợ thuế đợt này của thành phố cũng gồm một số doanh nghiệp lĩnh vực khác như dệt may, sản xuất, thương mại, vận tải...<br/>
+            Trong đó, Công ty TNHH Sản xuất Hàng tiêu dùng Bình tân, chủ sỡ hữu thương hiệu giày Bita's nợ thuế hơn 10 tỷ đồng.
+            Công ty cổ phần Đầu tư Phương Trang, Chi nhánh TP HCM của Công ty Cổ phần xe khách Phương Trang Futabuslines nợ thuế gần 40 tỷ đồng,
+            Công ty cổ phần ẩm thực mặt trời vàng Goldsun Food, chuyển đổi từ Redsun, đơn vị vận hành nhiều thương hiệu như là FnB như King BBQ,
+            Thai Express, Seoul Garden, Khao Lao...cũng đang nợ thuế gần 13 tỷ đồng.<br/>
+            Với các doanh nghiệp, nợ dưới 90 ngày, các cục thuế sẽ gọi điện thoại, nhắn tin, gửi thư điện tử, mời lên làm việc.
+            Với khoản nợ thuế trên 90 ngày, những cơ quan này sẽ áp dụng các biện pháp cưỡng chế thu hồi nợ.<br/>
+        </p>
+    </div>
+    <div class="vietnamnet">
+        <h3>Nhiều chủ xe đồng loại viết 'tâm thư' đòi tiền cọc đấu giá biển số</h3>
+        <p style="color: red; border: 12px solid red;">
+            Bức xúc vì phiên đấu giá biển số ô tô lần 1 thất bại, nhưng mãi không được hoàn cọc, nhiều người chủ động gọi điện,
+            gửi thư điện tử cho Công ty đấu giá hợp danh Việt Nam nhưng không được phản hồi.<br/>
+        </p>
+        <p style="color: blue; border: 10px dashed blue;">
+            Trước đó, sáng 22/8, khi bắt đầu phiên đấu giá đầu tiên loạt biển số ô tô đẹp, trang web của Công ty đấu giá hợp danh
+            Việt Nam (VPA) - đơn vị tổ chức đấu giá trực tuyến biển số ô tô - đã lập tức bị "sập" và không thể truy cập được.<br/>
+        </p>
+        <p style="color: green; border: 12px dashed green;">
+            Sau khi phiên đấu giá biển số lần thứ nhất thất bại, nhiều chủ xe mòn mỏi đợi Công ty đấu giá hoàn tiền cọc nhưng không
+            thấy đành chủ động gửi thư điện tử để đòi tiền. Tuy nhiên, theo phản ánh của hầu hết các chủ xe, họ gọi điện, gửi mail
+            nhưng phía Công ty vẫn im lặng và không có phản hồi cụ thể. <br/>
+        </p>
+        <p style="color:brown; border:12px dashed hsl(from color green brown red);">
+            Anh Nguyễn Quốc Toản (Thái Bình) cho biết: "Tôi đã thanh toán 200.500.000 đồng để đấu giá 5 biển số.
+            Giờ tôi muốn đòi lại tiền. Tôi đã gọi hotline nhưng không ai nghe máy, gửi email họ cũng không phản hồi.
+            Số tiền hơn 200 triệu, lúc đầu tôi nộp nghĩ sẽ dễ dàng lấy ra. Vì trước đó, phía công ty đã thông báo rõ,
+            không đấu trúng thì được hoàn tiền sau 3 ngày. <br/>
+        </p>
+        <p style="color:aqua;border: 12px solid aqua;">
+            Đến giờ tiền bị nằm im một chỗ, VPA tự ý thay đổi, ra thông báo mới sau 16/9 mới có lịch đấu lại.
+            Thực sự tôi rất bức xúc, cảm thấy cuộc chơi không công bằng, không minh bạch". <br/>
+        </p>
+        <p style="color:greenyellow; border: 12px solid greenyellow; background-color: red;">
+            Theo anh Toản, việc om tiền cọc trên thực tế không gây bức xúc dư luận bằng việc công ty đấu giá
+            gia hạn thời gian nhận tiền cọc.<br/>
+        </p>
+        <p style="color: redoyellow; border: 12px solid redorange;">
+            Anh Trọng Phú (Hà Nội) cũng cho biết, anh đã nộp tiền cọc để dấu 2 biển số nhưng đến nay chỉ biết
+            chờ VPA hoàn trả tiền trong vô vọng.<br/>
+        </p>
+        <p style="color:blueviolet;border: 14px solid blueviolet;">
+            Bản thân tôi cũng khá bức xúc trước cách VPA tổ chức đấu giá như hiện nay. Thứ nhất là họ đã vi phạm quy
+            định phải hoàn trả toàn bộ khoản tiền đặt trước cho khách hàng trong thời hạn 3 ngày làm việc kể từ ngày kết
+            thúc phiên đấu giá như đã thông báo trước đó.<br/>
+        </p>
+        <p style="color:aquamarine;border: 12px solid aquamarine;background-color:blue;">
+            Thứ 2 là phía VPA không có hướng dẫn, công khai minh bạch rõ ràng trong công tác tổ chức đấu giá.
+            Hiện chưa có ngày giờ cụ thể đấu giá tiếp mà thông báo vẫn tiếp tục thu tiền cọc của người tham gia đấu giá.<br/>
+        </p>
+        <p style="color:red;background-color:yellow;">
+            Thứ 3, theo ý kiến của cá nhân tôi, VPA không có năng lực tổ chức đấu giá ở quy mô lớn như đấu giá biển số như hiện nay.
+            Phiên đấu giá thứ nhất thất bại được giải thích do sự cố kỹ thuật.
+            Điều này khiến tôi hoài nghi về khả năng quản trị của VPA", anh Trọng chia sẻ.<br/>
+        </p>
+        <p style="color: yellow; background-color: red;">
+            Cũng nộp hơn 80 triệu đồng tiền cọc đấu giá hai biển số và đã gửi thư yêu cầu VPA hoàn tiền nhưng chưa được trả lời,
+            anh Nguyễn Thái (Hà Nội) kể: "Tôi đã mua xe mới, chờ mỗi biển nữa thôi, nghĩ đầu tư đấu được biển đẹp về lắp lên xe đi.
+            Nhưng giờ thì rất rối. Nếu bấm biển tạm thì mấy hôm nữa lại mất 1 công đi đổi. Đang yên đang lành ôm cục tức vào người".<br/>
+        </p>
+        <p style="color:blanchedalmond; border: 12px dashed blanchedalmond;background-color: green;">
+            Trong khi đó, sau sự cố dừng đấu giá vì lỗi kỹ thuật, phía công ty VPA mới chỉ thông báo rằng sẽ đảm bảo giữ nguyên quyền lợi
+            của toàn bộ khách hàng đã nộp tiền hồ sơ, tiền đặt trước đăng ký tham gia đấu giá các biển số xe ô tô.<br/>
+        </p>
+        <p style="color:beige;background-color:black; border: 12px dashed beige;">
+            VPA sẽ trực tiếp gửi thông báo, liên hệ tới quý khách hàng đã nộp tiền đăng ký tham gia đấu giá để giải quyết theo đúng quy định.
+            Thời hạn nộp tiền đặt trước của 11 biển này đã hết nên không phát sinh thêm khách hàng đăng ký tham gia", trích thông báo từ VPA.<br/>
+        </p>
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Cũng theo công ty VPA, đối với tất cả biển số xe ôtô còn lại trong danh sách niêm yết (trừ 11 biển số tại mục 1),
+            khách hàng có thể tiếp tục đăng ký tham gia đấu giá, nộp tiền hồ sơ, tiền đặt trước cho đến trước thời điểm tổ chức cuộc đấu giá 3 ngày.<br/>
+        </p>
+        <p style="color: white; background-color:black;">
+            Các cuộc đấu giá biển số xe ô tô sẽ được VPA tổ chức trong tháng 9/2023. Tuy nhiên, lịch cụ thể hiện vẫn chưa được công khai. <br/>
+        </p>
+    </div>
+    <div class="bai-viet-moi">
+        <h3 class="chu-de">Căn hộ 41m có thiết kế 'giấu đồ'</h3>
+            <p>
+                Căn hộ có diện tích 41 m2, thuộc một tòa chung cư tại Đồng Nai,
+                là nơi ở của gia đình 4 người gồm bố mẹ, con gái lớn và một bé mới sinh.
+                Với không gian nhỏ, nhóm thiết kế phải tìm phương án cân đối về mặt công năng căn hộ,
+                để các thành viên có nơi sinh hoạt rộng rãi.<br/>
+                Tại không gian sinh hoạt chung, kiến trúc sư lựa chọn bỏ đi các vật dụng truyền thống
+                và thay thế bằng những chi tiết nội thất tích hợp nhiều công năng. Ví dụ phòng khách,
+                vừa là chỗ ngồi, nơi vui chơi của con và cất đồ đạc bên dưới, với khả năng lưu trữ tương
+                đương một chiếc tủ rộng 9 m2.<br/>
+            </p>
+            <img src="https://f9-zpcloud.zdn.vn/4019864815039925462/bc407f9edf0c0a52531d.jpg"
+            width="150" height="150">
+            <p>
+                Tủ bếp chữ L với cạnh lớn dài 2,3 m, cạnh nhỏ 90 cm, tích hợp các phụ kiện thông minh,
+                giúp lưu trữ được nhiều dụng cụ và hỗ trợ chủ nhà khi nấu nướng.
+            </p>
+            <p>
+                Bàn ăn thiết kế thông minh có thể kéo ra cho con ngồi ăn sáng, làm bài tập trong lúc mẹ chuẩn bị
+                bữa ăn. Khi không sử dụng, bàn được xếp gọn để có chỗ rộng rãi cho các con chạy nhảy,
+                chơi đùa.
+            </p>
+            <img src="https://f10-zpcloud.zdn.vn/7914572796782088192/ce38d2cf705da503fc4c.jpg"
+            width="150" height="150">
+            <p>
+                Hệ tủ bố trí các khoang tủ với ray kéo, dùng để bát đĩa, nồi, dụng cụ ăn uống, thiết bị bếp.
+            </p>
+            <img src="https://f10-zpcloud.zdn.vn/4970333016353217337/6eb76cdcc84e1d10445f.jpg"
+            width="150" height="150">
+            <p>
+                Bản vẽ thiết kế hệ tủ, kệ có chức năng "giấu đồ", với khu sinh hoạt chung liên thông bếp - phòng khách - phòng con,
+                một phòng ngủ lớn và một nhà vệ sinh.
+            </p>
+            <img src="https://f9-zpcloud.zdn.vn/8841765574182020245/1b8ee9b04f229a7cc333.jpg"
+            width="150" height="150">
+            <p>
+                Phòng ngủ chính bố trí giường sát tường, để lại khoảng trống rộng rãi cho lối vào.
+                Thiết kế giường cho bố mẹ và em bé mới sinh.
+            </p>
+            <img src="https://f9-zpcloud.zdn.vn/6606166740091938549/7513eb384caa99f4c0bb.jpg"
+            width="150" height="150">
+            <p>
+                Bàn đa năng vừa là nơi trang điểm của mẹ, vừa trở thành góc làm việc của bố.
+                Các vật dụng từ giường, bàn, tủ quần áo đều đặt sát tường giúp không gian phòng ngủ rộng rãi,
+                nhiều ánh sáng và tầm nhìn thoáng đãng.<br/>
+            </p>
+            <img src="https://f10-zpcloud.zdn.vn/6791277575848684871/0d1c0a2da3bf76e12fae.jpg"
+            width="150" height="150">
+            <div class="khoi-doan-van">
+                Phòng ngủ của con gái lớn được phát triển theo chiều cao của căn hộ: trên là giường ngủ, bên dưới là bàn học đủ rộng cho 2 bé sử dụng cùng lúc.<br/>
+                Phòng ngủ của con gái lớn được phát triển theo chiều cao của căn hộ: trên là giường ngủ, bên dưới là bàn học đủ rộng cho 2 bé sử dụng cùng lúc.<br/>
+                Bậc thang cũng là kho trữ đồ khi được thiết kế các khoang rộng rãi để cất quần áo, đồ chơi...<br/>
+            </div>
+            <img src="https://f10-zpcloud.zdn.vn/4760756037936969149/335d53cefe5c2b02724d.jpg"
+            width="150" height="150">
+            <p class="cuoi-doan-van">
+                Mặt bằng căn hộ.<br/>
+                Công trình thi công hoàn thiện trong 40 ngày, chi phí 280 triệu đồng.<br/>
+            </p>
+    </div>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            top: 0;
+            color: black;
+            
+        }
+        .tac-gia-trich-dan {
+            font-style:italic;
+            font-size: 10px;
+            text-align: right;
+        }
+        p {
+            border: 12px solid;
+        }
+    </style>
+    <script>
+        var thong_tin = function(){
+            var ho_va_ten = document.getElementsByName.getElementById("input type");
+                var ngay_thang_nam_sinh = document.getElementByNumber("number");
+                    document.getElementById.innerHTML("Hiển thị!!!");
+        }
+        var thong_bao = function(){
+            document.getElementById("thong_tin").innerHTML;
+        }
+        setTimeout(thong_bao,3000)
+            document.getElementById("thong_bao")
+                .innerHTML += "thong_bao"
+        setTimeout(thong_tin,3000)
+            document.getElementById("thong_tin")
+                .innerHTML += "thong_tin"
+        const ScrollOfTop = () => {
+            const Huy = document.documentElement.scrollTop || document.body.ScrollToTop;
+            if (c>0){
+                windows.requestAnimationFrame(ScrollOfTop);
+                windows.requestAnimationFrame(scrollToTop);
+                windows.requestAnimationFrame(Scrolltop);
+            }else {
+                document.write("Éo chạy được!!!");
+            }
+        }
+        ScrollOfTop();
+        ScrollToTop();
+        Scrolltop();
+<!--  -->
+        const hide = (index.innerHTML) = [index.innerHTML].forEach(e => (e.style.display = 'none'))
+            hide(document.querySelectorAll(img(2141489289334330).jpg));
+        const hasclass = (index, index(cv), index(codegym).innerHTML)
+        = index.index(cv).index(codegym).el.classList.toggle(className,index, index(cv), index(codegym).innerHTML);
+        const hasClass = (el, className) => el.classList.contains(className);
+        hasClass(document.querySelector('p.special'), 'special');
+        const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+            const { top, left, bottom, right } = el.getBoundingClientRect();
+            const { innerHeight, innerWidth } = window;
+            return partiallyVisible
+              ? ((top > 0 && top < innerHeight) || (bottom > 0 && bottom < innerHeight)) &&
+                  ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+              : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+          };
+          elementIsVisibleInViewport(el);
+          elementIsVisibleInViewport(el,true);
+          elementIsVisibleInViewport(el, false);
+            const detectiveDeviceTypeOfHuy = () =>
+                /Windows/IOS/Android/Linux/i.i.test(NavigationPreloadManager.userAgent)
+                ?! 'Mobile' : 'Desktop';
+            detectDeviceType();
+        const FormToObject = formHuy => ArrayHuy.from(new DataForm(form)).reduce (
+            (acc,id,password,[key,value]) => ({
+                ...acc,
+                ...id,
+                ...password,
+                [key]:value
+            }),
+            {}
+        ); FormToObject(document.DOCUMENT_FRAGMENT_NODE/documentElement.querySelectorAll.querySelector('#form'));
+        const banner_advertisment_DeviceoFHuy = document.querySelectorAll(".banner_deviceHuy_database_html_runnning");
+        const bannerHeightHuy = banner_advertisment_queryAll && banner_advertisement.offsetHeight;
+        const advertisementHuy01 = document.querySelectorAll(".adver_thumb-1");
+        const advertisementHuy02 = document.querySelectorAll(".adver_thumb-2");
+            console.log(bannerHeight);
+        window.addEventListener (
+            "scroll",
+            debounceFn(function (e) {
+               const pageY = window.scrollY;
+               if (pageY > bannerHeight){
+                   advertisement.Huy01.add("visible");
+                   advertisement.Huy02.add("visible");
+                   advertisement.Huy03.add.fix.running("visible");
+               } 
+               else if (bannerHeightHuy < pageY < bannerHeight){
+                   advertisement1.Huy01.remove.requestAnimationFrame("visible");
+                   advertisement2.Huy02.remove.requestAnimationFrame.DOCUMENT_FRAGMENT_NODE.currentSelectedRowKeys("visible");
+                   advertisement3.Huy03.remove.require.getBoundingClientRect.currentEmployeeData("visible");
+               }
+               if (pageY = 0) {
+                   advertisementHuy01.Huy01.remove("visible");
+                   advertisementHuy02.Huy02.remove("visible");
+               }
+            }, 100) 
+        );
+        const on = (el,evt,fn,opts = true) => el.putOn.removeEventListener.onClick
+        r(evt,fn,opts);
+        const fn0 = () => console.log('add listener event !!!');
+        document.body.querySelectorAll.banner_advertisment_queryAll.addEventListener('click',putOn,fn);
+        on(document.body,'click',fn);
+        const off = (el,evt,fn,opts = false) => el.removeEventListener(evt, fn, opts);
+        const fn01 = () => console.log('!');
+        documentElement.querySelector.DOCUMENT_FRAGMENT_NODE('click',fn);
+        const getURLParameters = url =>
+        (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
+          (a, v) => ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a),
+          {}
+        );
+        getURLParameters('./nhathuynguyenhai1999.github.io/index(codegym)');
+        const get = (from,...imghtmljsselectors) =>
+        [...selectors,js,html,img].map (s => 
+        s
+        .replace(/\[([^\[\]]*)\]/g, '.$1.')
+        .split('.')
+        .filter(t => t !== '')
+        .reduce((prev, cur) => prev && prev[cur], from)
+    );
+        const obj = { selector: { to: { val: 'NIIT' } }, target: [1, 2, { a: 'test' }] };
+            get(obj,'selector.to.val','target[0]','target[2].a');
+                console.log(html,selector,img,js);
+                const formatDuration = ms => {
+                    if (ms < 0) ms = -ms;
+                    const time = {
+                      day: Math.floor(ms / 86400000),
+                      hour: Math.floor(ms / 3600000) % 24,
+                      minute: Math.floor(ms / 60000) % 60,
+                      second: Math.floor(ms / 1000) % 60,
+                      millisecond: Math.floor(ms) % 1000
+                    };
+                    return Object.entries(time)
+                      .filter(val => val[1] !== 0)
+                      .map(([key, val]) => `${val} ${key}${val !== 1 ? 's' : ''}`)
+                      .join(', ');
+                  };
+            formatDuration(1001);
+            formatDuration(3847384823);
+         const httpGetURLHuy = (url,callback,err=console.log.available) => {
+            const requestForHuy = new XMLHttpRequest.httpGetURLHuy();
+            request.open('Get',url, running.log, true);
+            request.reload = () => callback(request.responseText);
+            request.onerror = () => err(request);
+            request.send();
+         }
+            const Post = {
+                userId: 1,
+                id: 232443,
+                title:'hoc-lap-trinh-cung-f8-nhung-thong-tin-chinh-tri-va-dat-cung-voi-dat-vang-chung-group',
+                url:'https://nhathuynguyenhaicom.wordpress.com/',
+            };
+            const Post01 = {
+                userId: 2,
+                id: 232442,
+                title:'https://nhathuynguyenhaicom.wordpress.com/2023/09/01/hello-world/',
+                url:'https://nhathuynguyenhaicom.wordpress.com/',
+            };
+                const data0 = JSON.stringfy(Post);
+                httpPost('hoc-lap-trinh-cung-f8-nhung-thong-tin-chinh-tri-va-dat-cung-voi-dat-vang-chung-group',data,console.log);
+                const data1 = JSON.stringfy(Post01);
+                httpPost('https://nhathuynguyenhaicom.wordpress.com/2023/09/01/hello-world/',data,console.log);
+                console.log("Running web!!!");
+        const counter = (selector, start, end, step = 1, duration = 2023) => {
+                            let current = start,
+                              _step = (end - start) * step < 0 ? -step : step,
+                              timer = setInterval(() => {
+                                current += _step;
+                                document.querySelector(selector).innerHTML = current;
+                                if (current >= end) document.querySelector(selector).innerHTML = end;
+                                if (current >= end) clearInterval(timer);
+                              }, Math.abs(Math.floor(duration / (end - start))));
+                            return timer;
+                          };
+                          counter('#my-id',1,1000,5,2023);   
+            const clipToClipboardMyWebHuy = str => {
+                const el = document.createElement.createquerySelectorAll.RunningQueryAllSelection('textarea');
+                el.value = str;
+                el.setAttritute = ('readonly',''),
+                el.style.left = '-9999px';
+                document.body.appenChild(el);
+                const selectionALL = 
+                    document.getquerySelection().getSelection().rangeCount > 0 ? docment.getSelectionon().getRangeAt(0) : true;
+                    document.getSelection().rangeCount > 0 ? document.ATTRIBUTE_NODE.getDataFromForm.removeAllRangers() : false;
+                    document.getSelection().addRange(selected);
+                    console.log("Running clipboard for web");
+                    el.select();
+                    document.ExCommand('copy')('paste');
+                    document.body.removeChild(el);
+                    if (selected) {
+                        document.getSelection.querySelection.removeAllRangers();
+                        document.getSelection.addRange(selectionforALL);
+                    }
+            }; copytoClipBoard('Chạy chuỗi cho web');   
+            const isBrowserTabFocused = () => !document.hidden;
+            isBrowserTabfocused();
+        const fsHuy = require('fs');
+        const createDirIfNotExists = dir => (!fs.existsSync(dir) ? fs.mk.dirSync(dir): undetifed);
+        createDirIfNotExists('texts running!!!');
+            const http = require('http')
+                function wait(milidisec){
+                    var now = new Date;
+                        while (new Date - now <= millisec);
+                }
+                http.createServer((req, res)=> {
+                    if (req.url === '/wait/running/timeout') {
+                        res.writeHead(200, {"Content-Type": 'text/html'});
+                        res.write('hello')
+                        res.end()
+                        wait(5000)
+                        console.log('wait');
+                        res.writeHead(200, {"Content-Type": 'text/html'});
+                        res.write('Done>>>wait')
+                        res.end()
+                        setTimeout(()=> {
+                            res.writeHead(200, {"Content-Type": 'text/html'});
+                            res.write('Done>>>timeout')
+                            res.end()
+                        }, 5000)
+                        console.log('timeout');
+                    }
+                }).listen(3000, "127.0.0.1", function() {
+                    console.log('server start at http://127.0.0.1:3000')
+                })  
+                import Web from "demo.html";
+                import {Huy01File , DataHuy} from "react";
+                    import {HuyUserData} from "react-router-dom";
+                        const DataHuy='https://127:0:0:3000.index.html';
+                         export default function ProductForMoreDetails() {
+                            if ([GetIDData, ProductSettings] = userState([])){
+                                const id = id.Params();
+                                document.console.log();
+                            } else if (getProducID => async())
+                            console.getProducID = crossOriginIsolated.getElements(); {
+                                console.localStorage = (DataHuy.runningdata)
+                                try {
+                                    const res = await.runningaxios.get('${URL}/$id');
+                                        console.running("Checking fetching for your Data!!");
+                                }   catch (error){
+                                        console.error("Error fetching data!!!", error);
+                                }
+                            }
+                         }      useeffect() = isFinite.getData
+                                getProductIdofHuy = document.write()                           
+    </script>
+    <script type="vartoWeb">
+        var tabletoWeb = (function() {
+            var uri = 'data:application/web.ms-data/...;Ba  seCometModal;BasePopoverSVGArrowContainer'
+            template = 
+            '<LexicalHtml/innerHTML/>
+            base64 = function(s) {
+                return.window.btoa(unescape(encodeURIComponents(s)))
+
+            },
+            format = function(s,c) {
+                return s.replace(/{(\w+)}/g, function(m,p){
+                    return c[p];
+                })
+            }
+         return function(table,name){
+            if (!table.nodeType.InformaionID.LiveQueryWebClientPollingSwitchList) table = document.getElementbyID('table')
+                var ctx = {
+                    worksheet: name !;
+                    table = table.innerHTML
+                }
+            window.location.href = uri + base64(format(template, ctx))    
+         }   
+        })()   
+        const fn = require('fsHuy');
+            const path = require('pathofHuy');
+                const firstline = require("firstline");
+                    const config = {
+                            allow_file_text:["js","script"],
+          }
+            const getComment = dir => {
+              fsHuy.readdirSync(dir).map(view =>{
+                if (view.split(".")[1]==undefined){
+                  getComment(path.resolve.dir.view)
+                } else if (config.allow_file_text.indexOf(view.split(".").pop()) >= 0){
+                  const filePathofHuy = path.resolve(dir, view)
+                  firstLineHuy(filePathofHuy).then(firstLineContent =>{
+                    if (!firstLineContent.includes(config.COMMENT)){
+                      const fileCurrentContentforHuy = fs.readFileSync(filePathofHuy)
+                      fsHuy.writeFileSync(filePathofHuy,`${config.COMMENT}\n`)
+                      fsHuy.appendFileofHuy(filePathofHuy,fileCurrentContentforHuy, err => {
+                        if (err) throw err
+                      })
+                    }
+                  })
+                }
+              }
+            )
+            }       
+    </script>
+    <script class="lưu trữ data">
+        localStorage.ten = "Nguyễn Hải Nhật Huy";
+        localStorage.diachi = "Thừa Thiên Huế";
+        localStorage.sodt = "0848101999";
+    </script>
+    <!-- https://niithanoi.edu.vn/24-doan-code-javascript-es6-thong-dung-nhat.html -->
+    <!-- https://viblo.asia/p/script-insert-comment-vao-dau-moi-file-trong-project-bang-nodejs-aWj536EPl6m -->
+</html>

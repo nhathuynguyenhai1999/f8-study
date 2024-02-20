@@ -1,0 +1,19 @@
+.partner {
+  &__text {
+  }
+
+  &__list {
+    list-style: none;
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    padding: 3.5rem;
+  }
+
+  &__img {
+  }
+}

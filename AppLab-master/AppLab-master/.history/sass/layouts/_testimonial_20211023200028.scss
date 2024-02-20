@@ -1,0 +1,7 @@
+.testimonial {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__img {
+    @include size(82rem, 53rem);
+  }
+}

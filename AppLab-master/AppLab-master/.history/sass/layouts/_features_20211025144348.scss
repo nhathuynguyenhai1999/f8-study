@@ -1,0 +1,82 @@
+// Features Top
+.features-top {
+  @include flex(row, flex-start, flex-start, nowrap);
+
+  @media screen and (max-width: $bp-largest) {
+    @include flex(row, flex-start, center, nowrap);
+  }
+
+  @media screen and (max-width: $bp-lar) {
+    @include flex(column, center, center, nowrap);
+  }
+
+  &__img {
+    @include size(66rem, 86rem);
+    margin-right: 2.5rem;
+    object-fit: cover;
+
+    @media screen and (max-width: $bp-largest) {
+      @include size(55rem, 65rem);
+    }
+  }
+
+  &__text {
+    max-width: 43rem;
+  }
+
+  &__box {
+    @include flex(row, flex-start, center, nowrap);
+    &-icon {
+      margin-right: 3.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5.5rem;
+    }
+  }
+}
+
+// Features Bottom
+.features-bottom {
+  @include flex(row, space-between, center, nowrap);
+
+  @media screen and (max-width: $bp-lar) {
+    @include flex(column, space-between, center, nowrap);
+  }
+
+  &__img {
+    object-fit: cover;
+    @media screen and (max-width: $bp-largest) {
+      @include size(55rem, 65rem);
+    }
+    @media screen and (max-width: $bp-large) {
+      @include size(55rem, 60rem);
+    }
+  }
+
+  &__heading {
+    max-width: 33rem;
+
+    @media screen and (max-width: $bp-lar) {
+      max-width: unset;
+      text-align: center;
+    }
+  }
+
+  &__sub-heading {
+    max-width: 40rem;
+
+    @media screen and (max-width: $bp-lar) {
+      max-width: unset;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__box {
+    width: calc(50% - 5.2rem);
+  }
+}

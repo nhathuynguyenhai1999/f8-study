@@ -1,0 +1,37 @@
+.cta {
+  position: relative;
+
+  &__text {
+    max-width: 63.5rem;
+    padding-top: 8rem;
+    padding-bottom: 4.6rem;
+  }
+
+  &__app {
+    @include flex(row, flex-start, center, nowrap);
+
+    &-img {
+      @include size(18.5rem, 5.6rem);
+      object-fit: cover;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    object-fit: cover;
+
+    @media screen and (max-width: $bp-largest) {
+      @include size(67rem, 52.5rem);
+      top: -11.5%;
+    }
+
+    @media screen and (max-width: $bp-large) {
+      @include size(67rem, 52.5rem);
+      top: -11.5%;
+    }
+  }
+}

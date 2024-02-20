@@ -1,0 +1,20 @@
+.header {
+  margin: 9.5rem 0 5.5rem;
+  background-color: $color-grey-light;
+
+  &__nav {
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__hero {
+    @include flex(row, space-between, center, nowrap);
+
+    &-text {
+      @include size(calc(50% - 5.5rem), 100%);
+    }
+
+    &-image {
+      @include size(calc(50% - 5.5rem), 100%);
+    }
+  }
+}

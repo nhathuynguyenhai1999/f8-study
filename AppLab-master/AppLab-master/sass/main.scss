@@ -1,0 +1,23 @@
+@import "abstracts/mixin";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/menu";
+
+@import "layouts/header";
+@import "layouts/partner";
+@import "layouts/features";
+@import "layouts/jackpot";
+@import "layouts/design";
+@import "layouts/reason";
+@import "layouts/pricing";
+@import "layouts/testimonial";
+@import "layouts/faq";
+@import "layouts/cta";
+@import "layouts/footer";
+
+@import "pages/homes";

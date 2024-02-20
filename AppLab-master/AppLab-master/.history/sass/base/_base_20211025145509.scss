@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media screen and (max-width: $bp-large) {
+    font-size: 56.25%; //9px
+  }
+  @media screen and (max-width: $bp-medium) {
+    font-size: 50%; //8px
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: $color-text;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}

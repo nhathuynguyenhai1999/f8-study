@@ -1,0 +1,11 @@
+.header {
+  margin: 9.5rem 0 5.5;
+  background-color: $color-grey-light;
+
+  &__nav {
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__logo {
+  }
+}

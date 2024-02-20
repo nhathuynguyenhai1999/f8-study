@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .paragraph {
+    @apply text-16 text-tx-primary font-medium;
+  }
+  .title {
+    @apply text-[40px] font-semibold mb-1;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .border-gradient {
+    @apply;
+  }
+}

@@ -1,0 +1,114 @@
+.wrapper {
+  width: 160rem;
+  max-width: 100%;
+  background-color: $color-white;
+}
+
+.container {
+  width: 117rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section-partner {
+  margin-top: 12rem;
+}
+
+.section-features-top {
+  margin-top: 15.5rem;
+  margin-left: 9.5rem;
+
+  @media screen and (max-width: $bp-large) {
+    margin-top: 6rem;
+    margin-left: 6rem;
+  }
+
+  @media screen and (max-width: $bp-lar) {
+    margin-left: -3rem;
+  }
+}
+
+.section-jackpot {
+  margin-top: 7.5rem;
+}
+
+.section-design {
+  margin-top: 11.5rem;
+  margin-left: 13.5rem;
+
+  @media screen and (max-width: $bp-lar) {
+    margin-left: 2.5rem;
+  }
+
+  @media screen and (max-width: $bp-lar) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.section-reason {
+  margin-top: 21.5rem;
+
+  @media screen and (max-width: $bp-large) {
+    margin-top: 12.5rem;
+  }
+
+  @media screen and (max-width: $bp-lar) {
+    margin: 12.5rem 3rem 0;
+  }
+}
+
+.section-features-bottom {
+  margin-top: 19rem;
+  margin-left: 12rem;
+
+  @media screen and (max-width: $bp-large) {
+    margin: 10rem 0 0 10rem;
+  }
+
+  @media screen and (max-width: $bp-lar) {
+    margin: 10rem 0 0 4rem;
+  }
+}
+
+.section-pricing {
+  margin-top: 17.5rem;
+  padding-bottom: 10.5rem;
+  border-bottom: 3px solid $color-primary-light-3;
+
+  @media screen and (max-width: $bp-large) {
+    margin-top: 12.5rem;
+  }
+}
+
+.section-testimonial {
+  margin-top: 15.5rem;
+
+  @media screen and (max-width: $bp-large) {
+    margin-top: 4.5rem;
+  }
+
+  @media screen and (max-width: $bp-lar) {
+    margin: 4.5rem 3rem 0;
+  }
+}
+
+.section-faq {
+  margin-top: 17rem;
+  padding-bottom: 11rem;
+  border-bottom: 3px solid $color-primary-light-3;
+
+  @media screen and (max-width: $bp-large) {
+    margin-top: 12.5rem;
+  }
+}
+
+.section-cta {
+  margin-top: 1.5rem;
+  margin-left: 11rem;
+
+  @media screen and (max-width: $bp-lar) {
+    @include flex(row, center, center, nowrap);
+    margin-left: 0;
+  }
+}

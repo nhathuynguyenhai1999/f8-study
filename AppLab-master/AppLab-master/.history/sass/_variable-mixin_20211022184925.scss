@@ -1,0 +1,26 @@
+// variable
+$color-text: #616368;
+$color-primary: #242f51;
+$color-primary-light: #2563ff;
+$color-primary-dark: #2500f9;
+
+$color-secondary: #f55767;
+
+$color-tertiary: #40975f;
+
+$color-white: #fff;
+$color-grey-light: #fdfdfe;
+
+// Mixin
+@mixin flex(
+  $dir: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}

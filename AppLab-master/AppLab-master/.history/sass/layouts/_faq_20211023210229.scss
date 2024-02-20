@@ -1,0 +1,43 @@
+.faq {
+  max-width: 95rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(column, center, center, nowrap);
+  }
+
+  &__sub-heading {
+    max-width: 64rem;
+    margin-bottom: 6.5rem;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    background-color: $color-primary-light-5;
+    padding: 1.5rem 4rem 1.5rem 5rem;
+    @include flex(row, space-between, center, nowrap);
+
+    &-content {
+      padding-bottom: 7.5rem;
+    }
+
+    &-icon {
+      font-size: 3rem;
+      color: $color-primary;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &--active {
+      display: block;
+      padding: 0 9rem 0 5rem;
+      h3 {
+        padding-top: 5rem;
+      }
+    }
+  }
+}

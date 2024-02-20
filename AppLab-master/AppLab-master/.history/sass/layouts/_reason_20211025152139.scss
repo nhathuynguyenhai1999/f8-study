@@ -1,0 +1,49 @@
+.reason {
+  max-width: 97rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(column, center, center, nowrap);
+  }
+
+  &__heading {
+    max-width: 44rem;
+  }
+
+  &__sub-heading {
+    max-width: 64rem;
+    margin-bottom: 9.5rem;
+
+    @media screen and (max-width: $bp-small) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    @include flex(row, space-between, center, nowrap);
+
+    @media screen and (max-width: $bp-small) {
+      @include flex(column, center, center, nowrap);
+    }
+  }
+
+  &__box {
+    width: calc(33.3333% - 6rem);
+
+    @media screen and (max-width: $bp-medium) {
+      width: calc(33.3333% - 2rem);
+    }
+    @media screen and (max-width: $bp-small) {
+      width: 100%;
+      text-align: center;
+    }
+
+    &-icon {
+      margin: 0 auto 3rem;
+    }
+
+    h3 {
+      color: $color-primary;
+    }
+  }
+}

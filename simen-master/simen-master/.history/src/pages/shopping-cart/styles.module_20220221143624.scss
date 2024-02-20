@@ -1,0 +1,39 @@
+.table {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0px -1px 24px 0px;
+  text-align: left;
+  border-collapse: separate;
+  border-radius: 5px;
+
+  & thead tr th {
+    background: #f5f5f5;
+    border-color: #eaeaea;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+  }
+}
+
+.remove {
+  width: 5%;
+}
+
+.thumbnail {
+  width: 9.5%;
+}
+
+.name {
+  width: 30%;
+}
+
+.price {
+  width: 16%;
+}
+
+.quantity {
+  width: 22%;
+}
+
+.subtotal {
+  width: 17.5%;
+}

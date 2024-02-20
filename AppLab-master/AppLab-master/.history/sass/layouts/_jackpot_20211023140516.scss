@@ -1,0 +1,19 @@
+.jackpot {
+  max-width: 103rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__content {
+  }
+
+  &__box {
+    &-icon {
+    }
+
+    &-text {
+    }
+  }
+}

@@ -1,0 +1,53 @@
+import React from 'react';
+import styles from './styles.module.scss';
+
+function HomePage() {
+  return (
+    <div className={styles.home}>
+      <div className={styles.content}>
+        <div className={styles.box1}>
+          <img
+            className={styles.img1}
+            src="http://demo.snstheme.com/wp/simen/wp-content/uploads/2011/05/01.png"
+            alt=""
+          />
+        </div>
+        <div className={styles.box2}>
+          <img
+            className={styles.img2}
+            src="http://demo.snstheme.com/wp/simen/wp-content/uploads/2011/05/5.png"
+            alt=""
+          />
+        </div>
+        <div className={styles.box3}>
+          <img
+            className={styles.img}
+            src="http://demo.snstheme.com/wp/simen/wp-content/uploads/2015/11/banner1-300x286.jpg"
+            alt=""
+          />
+        </div>
+        <div className={styles.box4}>
+          <img
+            className={styles.img}
+            src="http://demo.snstheme.com/wp/simen/wp-content/uploads/2015/11/banner2-300x286.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className={styles.hero}>
+        <div className={styles['hero-img']}>
+          <img
+            src="http://demo.snstheme.com/wp/simen/wp-content/uploads/2011/05/call-to-action.jpg"
+            alt=""
+          />
+        </div>
+        <div className={styles['hero-content']}>
+          <h1>AXEL - STOOL</h1>
+          <h4>NEW PRODUCTS</h4>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  );
+}
+export default HomePage;

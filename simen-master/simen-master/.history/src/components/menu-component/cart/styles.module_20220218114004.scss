@@ -1,0 +1,20 @@
+.search {
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  font-size: 1.2rem;
+  color: #666;
+
+  &-icon-box {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid #000;
+    margin-top: 3px;
+  }
+
+  &-text {
+    color: #e34444;
+    display: block;
+    margin: 0 5px;
+  }
+}

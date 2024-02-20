@@ -1,0 +1,15 @@
+.menu {
+  &__list {
+    list-style: none;
+    @include flex(row, flex-start, center, nowrap);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+    padding: 2rem 1.2rem;
+    color: $color-text;
+  }
+}

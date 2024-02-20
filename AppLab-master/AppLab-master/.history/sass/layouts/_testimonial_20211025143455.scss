@@ -1,0 +1,97 @@
+.testimonial {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__img {
+    @include size(82rem, 53rem);
+    object-fit: cover;
+
+    @media screen and (max-width: $bp-largest) {
+      @include size(55rem, 45rem);
+    }
+  }
+
+  &__text {
+    max-width: 59rem;
+  }
+
+  &__header {
+    max-width: 48rem;
+  }
+
+  &__star {
+    &-icon {
+      font-size: 2rem;
+      fill: #ffcc00;
+    }
+  }
+
+  &__user {
+    @include flex(row, flex-start, center, nowrap);
+
+    @media screen and (max-width: $bp-lar) {
+      margin-top: -4rem;
+    }
+
+    @media screen and (max-width: $bp-lar) {
+      @include flex(column, center, center, nowrap);
+    }
+
+    &-img {
+      @include size(9rem);
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 3rem;
+
+      @media screen and (max-width: $bp-lar) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-name {
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+
+  &__transfer {
+    margin-left: auto;
+    position: relative;
+
+    @media screen and (max-width: $bp-lar) {
+      margin-left: 0;
+    }
+
+    &-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @include size(5rem);
+      border-radius: 50%;
+      font-size: 2rem;
+
+      &--white {
+        background-color: $color-white;
+        color: $color-grey-light-3;
+        border: 1px solid $color-grey-light-3;
+      }
+
+      &--blue {
+        background-color: $color-primary-light-4;
+        color: $color-primary-dark;
+        border: 1px solid $color-primary-light-4;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 0.2rem;
+      height: 60%;
+      background-color: $color-grey-light-3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

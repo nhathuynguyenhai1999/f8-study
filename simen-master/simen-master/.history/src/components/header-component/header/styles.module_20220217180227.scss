@@ -1,0 +1,35 @@
+.container {
+  padding: 4rem 0 1rem;
+  display: flex;
+  color: #666;
+}
+
+.image {
+  width: 14.5rem;
+  height: 3.6rem;
+  object-fit: covers;
+  // margin-right: 14rem;
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 33, 33%;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.sub {
+  font-size: 1rem;
+}

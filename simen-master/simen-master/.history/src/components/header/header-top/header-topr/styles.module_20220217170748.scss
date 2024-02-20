@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+
+  &-right {
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+    height: 100%;
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.text {
+  margin-left: 1rem;
+}

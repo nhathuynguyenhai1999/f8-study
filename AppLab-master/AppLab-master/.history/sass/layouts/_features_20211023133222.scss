@@ -1,0 +1,16 @@
+// Features Top
+.features-top {
+  @include flex(row, flex-start, center, nowrap) &__img {
+  }
+
+  &__text {
+  }
+
+  &__box {
+    &-icon {
+    }
+
+    &-content {
+    }
+  }
+}

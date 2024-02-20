@@ -1,0 +1,43 @@
+.cart {
+  position: relative;
+  &-box {
+    display: flex;
+    align-items: center;
+    min-width: 5rem;
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  &-icon-box {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid #000;
+    margin-top: 3px;
+  }
+
+  &-text {
+    color: #e34444;
+    display: block;
+    margin: 0 5px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 85%;
+  right: 0;
+  z-index: 9999;
+  text-align: left;
+  display: block;
+
+  &::before {
+    border-color: rgba(234, 234, 234, 0);
+    border-bottom-color: #eaeaea;
+    border-width: 7px;
+    margin-left: -7px;
+    border-width: 20px;
+    margin-left: -11px;
+    left: inherit !important;
+    right: 20px !important;
+  }
+}

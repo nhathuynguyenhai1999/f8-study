@@ -1,0 +1,61 @@
+.header {
+  margin-top: 9.5rem;
+  background-color: $color-grey-light;
+  position: relative;
+
+  &__nav {
+    @include flex(row, space-between, center, nowrap);
+    margin-bottom: 5.5rem;
+  }
+
+  &__hero {
+    @include flex(row, space-between, center, nowrap);
+    z-index: 2;
+
+    &-text {
+      @include size(calc(50% - 5.5rem), 100%);
+      margin-left: 7rem;
+    }
+
+    &-label {
+      @include flex(row, flex-start, center, nowrap);
+      background-color: $color-grey-light-2;
+      display: inline-flex;
+      padding: 1rem 5rem 1rem 0;
+      position: relative;
+      border-radius: 10rem;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        @include size(4rem, 100%);
+        background-color: #feaa25;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &-icon {
+        font-size: 2rem;
+        color: $color-white;
+        z-index: 10;
+        margin-left: 1rem;
+      }
+
+      &-text {
+        margin-left: 2rem;
+      }
+    }
+
+    &-image {
+      @include size(calc(50% - 5.5rem), 100%);
+    }
+  }
+
+  &-bg {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,44 @@
+body {
+  background: #aaa;
+}
+
+// outer parent to cut a viewing window
+#container {
+  // center in parent
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 400px;
+  background: #444;
+
+  display: flex;
+  overflow: auto;
+}
+
+// inner parent allowed to stretch to fit children
+#flex-scroll {
+  // inside spacing
+  padding: 30px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.box {
+  width: 75px;
+  height: 75px;
+}
+
+.box:nth-child(3n-2) {
+  background-color: #ef5350;
+}
+.box:nth-child(3n-1) {
+  background-color: #2e7d32;
+}
+.box:nth-child(3n) {
+  background-color: #03a9f4;
+}

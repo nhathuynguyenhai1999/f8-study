@@ -1,0 +1,9 @@
+.footer {
+  padding: 11rem 0 12rem;
+  background-color: $color-primary-dark-2;
+  @include flex(column, center, center, nowrap);
+
+  @media screen and (max-width: $bp-lar) {
+    padding: 11rem 0 12rem;
+  }
+}

@@ -1,0 +1,27 @@
+.jackpot {
+  max-width: 103rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(row, flex-start, center, nowrap);
+  }
+
+  &__heading {
+    margin-right: 13rem;
+  }
+
+  &__sub-heading {
+    margin-right: 7.5rem;
+  }
+
+  &__content {
+  }
+
+  &__box {
+    &-icon {
+    }
+
+    &-text {
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.table {
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr 3fr 4fr 3fr;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coupon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

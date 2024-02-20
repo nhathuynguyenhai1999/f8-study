@@ -1,0 +1,58 @@
+.testimonial {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__img {
+    @include size(82rem, 53rem);
+  }
+
+  &__text {
+    max-width: 59rem;
+  }
+
+  &__header {
+    max-width: 48rem;
+  }
+
+  &__star {
+    &-icon {
+      font-size: 2rem;
+      fill: #ffcc00;
+    }
+  }
+
+  &__user {
+    @include flex(row, flex-start, center, nowrap);
+
+    &-img {
+      @include size(9rem);
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 3rem;
+    }
+
+    &-name {
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+
+  &__transfer {
+    margin-left: auto;
+
+    &-btn {
+      display: inline-block;
+      @include size(5rem);
+      border-radius: 50%;
+
+      &--white {
+        background-color: $color-white;
+        color: $color-grey-light-3;
+      }
+
+      &--blue {
+        background-color: $color-primary-light-4;
+        color: $color-primary-dark;
+      }
+    }
+  }
+}

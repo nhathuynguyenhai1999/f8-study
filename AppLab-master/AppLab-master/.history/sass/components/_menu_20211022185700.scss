@@ -1,0 +1,12 @@
+.menu {
+  &__list {
+    list-style: none;
+    @include flex(row, flex-start, center, nowrap);
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+}

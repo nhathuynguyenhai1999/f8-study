@@ -1,0 +1,22 @@
+.header {
+  margin-top: 9.5rem;
+  background-color: $color-grey-light;
+
+  &__nav {
+    @include flex(row, space-between, center, nowrap);
+  }
+
+  &__logo {
+  }
+}
+
+.menu {
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+}

@@ -1,0 +1,71 @@
+.footer {
+  padding: 0 16rem;
+  background-color: #f8f8f6;
+  padding-bottom: 4.2rem;
+
+  &-box {
+    padding: 5.5rem 1.5rem 0;
+  }
+}
+
+.col {
+  padding: 0 1rem;
+
+  &-6 {
+    max-width: 80%;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: ;
+}
+
+.text {
+  &-box {
+    display: flex;
+  }
+  &-sub {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.icon {
+  position: relative;
+  z-index: 1;
+  margin: 0 1rem;
+
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.3rem;
+  border-radius: 100%;
+
+  font-size: 1.3rem;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  border: 1 px solid #eaeaea;
+  color: #888;
+  transition: all 0.3s ease;
+}
+
+.sub {
+  display: block;
+}
+
+.list {
+}
+
+.item {
+}
+
+.link {
+  display: block;
+}
+
+.input {
+}
+
+.button {
+}

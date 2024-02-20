@@ -1,0 +1,94 @@
+.pricing {
+  max-width: 97rem;
+  margin: 0 auto;
+
+  &__header {
+    @include flex(column, center, center, nowrap);
+  }
+
+  &__heading {
+    max-width: 44rem;
+  }
+
+  &__sub-heading {
+    max-width: 64rem;
+    margin-bottom: 8rem;
+  }
+
+  &__label {
+    margin-bottom: 4rem;
+    display: inline-block;
+    border: 2px solid $color-text;
+    padding-bottom: 1px;
+    padding-top: 0.5px;
+    border-radius: 10rem;
+
+    &-btn {
+      &:hover {
+        box-shadow: unset;
+        transform: unset;
+      }
+
+      &--grey {
+        color: $color-text;
+      }
+    }
+  }
+
+  &__content {
+    @include flex(row, space-between, flex-start, nowrap);
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+
+  &__box {
+    width: calc(50% - 2rem);
+    max-width: 32rem;
+    border-radius: 10px;
+
+    &--shadow {
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &--border {
+      border: 2px solid rgba($color-black, 0.2);
+    }
+
+    &-price {
+      background-image: linear-gradient(
+        to bottom,
+        $color-white,
+        $color-primary-light-2
+      );
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__value {
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+    span {
+      font-size: 5rem;
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+
+  &__name {
+    color: $color-primary;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 4rem;
+    }
+  }
+}

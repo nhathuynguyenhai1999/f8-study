@@ -1,0 +1,9 @@
+.cta {
+  @include flex(row, flex-start, center, nowrap);
+
+  &__app {
+    &-img {
+      @include size(18.5rem, 5.6rem);
+    }
+  }
+}
